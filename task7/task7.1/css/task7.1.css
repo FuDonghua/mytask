@@ -35,7 +35,6 @@ main {
     line-height: .58rem;
     text-align: center;
     margin: .58rem .18rem .14rem .18rem;
-    height: .58rem;
     font-size: .17rem;
     color: #9A9A9A;
     background-color: #FFFFFF
@@ -60,7 +59,6 @@ main {
     margin: 0;
     padding-top: .15rem;
     text-align: center;
-    width: 100%;
     height: .45rem;
     border-bottom: .01rem solid #FBB435;
     font-size: .19rem;
@@ -70,7 +68,8 @@ main {
 
 button{
     padding: 0;
-    border: 0;
+    border: none;
+    outline: none;
 }
 
 .easy {
@@ -78,10 +77,8 @@ button{
     height: .67rem;
     width: calc(100% - .5rem);
     margin: .15rem .25rem;
-    border: .01rem solid #69D1E9;
     font-size: .16rem;
     color: #FFFFFF;
-    outline: none;
     background-color: #69D1E9;
 }
 
@@ -98,7 +95,6 @@ button{
     width: .14rem;
     height: .28rem;
     background: url(../img/css_sprites.png) no-repeat -10px -10px;
-    outline: none;
 }
 
 .dot {

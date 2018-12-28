@@ -19,7 +19,6 @@ header {
     border-bottom: .01rem solid rgba(255, 255, 255, .5);
     height: .44rem;
     z-index: 2;
-    background-color: #29BDE0;
 }
 
 .home {
@@ -54,7 +53,6 @@ header {
 .victory {
     margin-bottom: .16rem;
     font-size: .24rem;
-    width: .96rem;
     height: .23rem;
     color: #FFFFFF;
 }
