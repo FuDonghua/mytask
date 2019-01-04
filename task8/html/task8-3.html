@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-width,initial-scale=1,minimum-scale=1,user-scale=no" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" /> -->
+
+    <title>task8-3</title>
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/task8-3.css" />
+</head>
+
+<body style="overflow-x:hidden">
+    <header>
+        <div style="background-color:#FFFFFF;">
+            <div class="container">
+                <div class="top">
+                    <div style="line-height: 40px;">客户热线：010-594-78634</div>
+                    <div class="top-right">
+                        <div class="wx"></div>
+                        <div class="qq"></div>
+                        <div class="wb"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color:#26A26F;">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-dark">
+                    <!-- Brand -->
+                    <div class="logo"><img src="../img/logo.png" /></div>
+
+                    <!-- Toggler/collapsibe Button -->
+                    <div class="btn">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <!-- Navbar links -->
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav" style="line-height: 80px;">
+                            <li class="nav-item">
+                                <div class="anniu"> <a class="nav-link" href="../html/task8-1.html">首页</a></div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="anniu"><a class="nav-link" href="../html/task8-2.html">职业</a></div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="anniu"> <a class="nav-link" href="#">推荐</a></div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="anniu"> <a class="nav-link" href="#">关于</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--  -->
+    <main>
+        <div class="container all">
+            <div class="start"><span class="page">首页></span><a class="partner">职业</a></div>
+            <div class="project">
+                <div class="direction">方向:</div>
+                <div class="items">全部</div>
+                <div class="items">前端开发</div>
+                <div class="items">后端开发</div>
+                <div class="items">移动开发</div>
+                <div class="items">整站开发</div>
+                <div class="items">运营维护</div>
+            </div>
+            <!-- 第一排 -->
+            <div class="web">前端开发方向</div>
+            <div class="row four">
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第一个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第二个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第三个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 第二排 -->
+            <div class="web">后端开发方向</div>
+            <div class="row four">
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第一个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第二个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第三个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第四个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第五个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 第三排 -->
+            <div class="web">运维方向</div>
+            <div class="row four">
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第一个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第二个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第三个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 four-one">
+                    <!-- 第四个表格 -->
+                    <table class="table">
+                        <tr>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                            <td class="zero" style="width: 25%;"></td>
+                        </tr>
+                        <!-- 第一行 -->
+                        <tr class="p-one">
+                            <td class="p-one-one"><img class="photo" src="../img/touxiangg.png" /></td>
+                            <td colspan="3" class="p-one-two">
+                                <p class="title">Web前端工程师</p>
+                                <p class="essay">Web前端开发工程师，主要职责是利用(x)HTML/CSS/JavaScript/flash等各种web技术进行产品的开发。</p>
+                            </td>
+                        </tr>
+                        <!-- 第二行 -->
+                        <tr class="p-two">
+                            <td colspan="2" class="p-two-one">门槛&#8195;<img src="../img/xxx.png" /></td>
+                            <td colspan="2" class="p-two-one">难易程度&#8195;<img src="../img/xxx.png" />&#8195;<img src="../img/xxx.png" /></td>
+                        </tr>
+                        <!-- 第三行 -->
+                        <tr class="p-three">
+                            <td colspan="2" class="p-two-one">成长周期&#8195;<span style="color: red;">1-3</span><span
+                                    style="color: black;">年</span></td>
+                            <td colspan="2" class="p-two-one">稀缺程度&#8195;<span style="color: red;">345</span><span
+                                    style="color: black;">家公司需要</span></td>
+                        </tr>
+                        <!-- 第四行 -->
+                        <tr class="p-four">
+                            <td rowspan="3" class="p-four-one">薪资待遇</td>
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第五行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第六行 -->
+                        <tr class="p-four">
+                            <td colspan="3" class="p-two-two">0-1年 <span style="float:right;">5k-10k/月</span></td>
+                        </tr>
+                        <!-- 第七行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-seven-one">有<span style="color: red;">286</span>人在学</td>
+                        </tr>
+                        <!-- 第八行 -->
+                        <tr class="p-three">
+                            <td colspan="4" class="p-two-one">提示：在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                        </tr>
+                    </table>
+                    <div class="cartoon">
+                        <p class="ios">ios工程师</p>
+                        <p class="concrete">iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属
+                            于类Unix的商业操作系统。国内iOS开
+                            发起步相对较晚，人才培养机制更是远
+                            远跟不上市场发展速度。有限的iOS开
+                            发人才成了国内企业必争的资源。国内 iOS开发起步相对较晚，人才培养机制
+                            更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 底部蓝框内容 -->
+    <footer>
+        <div class="bag">
+            <div class="container">
+                <div class="row eight">
+                    <div class="col">
+                        <div class="tree">技能树 —— 改变你我</div>
+                        <div class="fit">
+                            <div style="display:inline-block;">关于我们</div>
+                            <div class="qiye" style="display:inline-block;">| 联系我们 |</div>
+                            <div style="display:inline-block;">合作企业</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="web-two">旗下网站</div>
+                        <div class="eight-one">
+                            <div class="it">草船云孵化器</div>
+                            <div class="best">最强IT特训营</div>
+                        </div>
+                        <div class="eight-two">
+                            <div class="it">葡萄藤轻游戏</div>
+                            <div class="best">桌游精灵</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="eight-three">
+                            <div class="gzh">微信公众号平台</div>
+                            <div class="gzh"><img src="../img/qrcode_for_gh_32213eeb65ba_1280.png" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="finally">Copyright©2015技能树www.jnshu.com All Rights Reserved丨京Icp备13005880号</div>
+        </div>
+    </footer>
+</body>
+
+</html>
