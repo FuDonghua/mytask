@@ -45,11 +45,6 @@ body {
     background-color: #29B078;
 }
 
-.anniu {
-    width: 50px;
-    text-align: center;
-}
-
 @media screen and (max-width:768px) {
     .nav-item {
         display: flex;
@@ -192,10 +187,8 @@ button {
 }
 
 .show {
-    margin-top: 50px;
     text-align: center;
     font-size: 18px;
-    font-weight: bold;
     color: #333333;
 }
 
@@ -302,7 +295,21 @@ button {
     overflow: hidden;
 }
 
-
+.alibaba{
+    width: 100%;
+}
+.st{
+    width: 100%;
+}
+.v{
+    width: 100%;
+}
+.cg{
+    width: 100%;
+}
+.ff{
+    width: 100%;
+}
 
 .six-one:hover {
     box-shadow: 5px 5px 5px 5px #999999 !important;
@@ -312,6 +319,21 @@ button {
 @media screen and (max-width: 768px) {
     .six-one {
         width: 100%;
+    }
+    .alibaba{
+        width: auto;
+    }
+    .st{
+        width: auto;
+    }
+    .v{
+        width: auto;
+    }
+    .cg{
+        width: auto;
+    }
+    .ff{
+        width: auto;
     }
 }
 
@@ -458,5 +480,15 @@ li {
 
     .finally {
         margin-top: 390px;
+    }
+}
+.anniu {
+    width: 40px;
+    margin-left: 50px;
+    text-align: center;
+}
+@media (min-width: 768px){
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 0;
     }
 }
