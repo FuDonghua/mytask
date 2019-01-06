@@ -205,13 +205,31 @@ input[type="radio"]+label::before {
     border-radius: 50%;
     border: 1px solid #D5D5D5;
 }
+input[type="checkbox"]+label::before {
+    content: "\a0";
+    /*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #D5D5D5;
+}
 
 input[type="radio"]:checked+label::before {
     background-clip: border-box;
     border: 8px solid #1D7AD9;
 }
+input[type="checkbox"]:checked+label::before {
+    background-clip: border-box;
+    border: 8px solid #1D7AD9;
+}
 
 input[type="radio"] {
+    visibility: hidden;
+}
+input[type="checkbox"] {
     visibility: hidden;
 }
 
@@ -437,7 +455,7 @@ input[type="radio"] {
 }
 
 .tree {
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 .fit {
@@ -455,7 +473,7 @@ input[type="radio"] {
 }
 
 .eight-two {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .it:hover {
@@ -538,4 +556,7 @@ input[type="radio"] {
     .finally {
         margin-top: 376px;
     }
+}
+.kuang{
+    outline: none;
 }
