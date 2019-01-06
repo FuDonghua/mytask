@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-width,initial-scale=1,minimum-scale=1,user-scale=no" />
+
+    <title>task10</title>
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/task10.css" />
+</head>
+
+<body>
+    <header>
+        <div style="background-color:#1D7AD9;">
+            <div class="container">
+                <div class="top">
+                    <div class="phone">客户热线：010-594-78634</div>
+                    <div class="top-right">
+                        <div class="enter">登入</div>
+                        <div class="register">注册</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="choice">
+            <div class="container">
+                <div class="choose">
+                    <div class="home">首页</div>
+                    <div class="home">在限定制</div>
+                    <div class="home">标准箱</div>
+                    <div class="home">品质保障</div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="flow">
+                <div class="box">
+                    <div class="rectangle"></div>
+                    <div class="round">1</div>
+                    <div class="note">1.定制纸箱</div>
+                </div>
+                <div class="box">
+                    <div class="rectangle"></div>
+                    <div class="round">2</div>
+                    <div class="note">2.选择数量</div>
+                </div>
+                <div class="box">
+                    <div class="rectangle"></div>
+                    <div class="round">3</div>
+                    <div class="note">3.上传附件</div>
+                </div>
+                <div class="box">
+                    <div class="rectangle"></div>
+                    <div class="round">4</div>
+                    <div class="note">4.确认下单</div>
+                </div>
+            </div>
+            <div class="step">请您按照以下的步骤来定制您的纸箱</div>
+            <!-- 选择表 -->
+            <!-- 第一行表格 -->
+            <div style="border: 1px solid #E6E6E6">
+                <div class="box-type"><img class="hezi" src="../img/box.png">&#8195;选择箱型</div>
+                <div class="specific-one">
+                    <div class="duikou">
+                        <input type="radio" name="kind" id="duikou" class="model" />
+                        <label for="duikou">对口箱</label>
+                    </div>
+                    <div class="feiji">
+                        <input type="radio" name="kind" id="feiji" class="model" />
+                        <label for="feiji">飞机盒</label>
+                    </div>
+                    <div class="tiandi">
+                        <input type="radio" name="kind" id="tiandi" class="model" />
+                        <label for="tiandi">天地盖</label>
+                    </div>
+
+                    <div class="details">
+                        查看详情<div class="blue"></div>
+                        <div class="menu">
+                            <p class="first">对口箱</p>
+                            <p class="first">飞机盒</p>
+                            <p class="first">天地盖</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第二行表格 -->
+                <div class="box-type"><img class="hezi" src="../img/Ruler.png">&#8195;确定尺寸</div>
+                <div class="specific-two">
+                    <div class="waijing">
+                        <input type="radio" name="diameter" id="wai" class="model" />
+                        <label for="wai">外径</label>
+                        <div class="size">
+                            <div>长<input type="text" name="phonenumber" size="10" maxlength="10" placeholder="请输入数字"
+                                    oninput="value=value.replace(/[^\d]/g,'')" />mm</div>
+                            <div>宽<input type="text" name="phonenumber" size="10" maxlength="10" placeholder="请输入数字"
+                                    oninput="value=value.replace(/[^\d]/g,'')" />mm</div>
+                            <div>高<input type="text" name="phonenumber" size="10" maxlength="10" placeholder="请输入数字"
+                                    oninput="value=value.replace(/[^\d]/g,'')" />mm</div>
+                        </div>
+                    </div>
+                    <div class="neijing">
+                        <input type="radio" name="diameter" id="nei" class="model" />
+                        <label for="nei">内径</label>
+                        <div class="size">
+                            <div>长<input type="text" name="phonenumber" size="10" maxlength="10" placeholder="请输入数字"
+                                    oninput="value=value.replace(/[^\d]/g,'')" />mm</div>
+                            <div>宽<input type="text" name="phonenumber" size="10" maxlength="10" placeholder="请输入数字"
+                                    oninput="value=value.replace(/[^\d]/g,'')" />mm</div>
+                            <div>高<input type="text" name="phonenumber" size="10" maxlength="10" placeholder="请输入数字"
+                                    oninput="value=value.replace(/[^\d]/g,'')" />mm</div>
+                        </div>
+                    </div>
+
+                    <div class="details">
+                        查看详情<div class="blue"></div>
+                        <div class="menu">
+                            <p class="first">外径</p>
+                            <p class="first">内径</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第三行表格 -->
+                <div class="box-type"><img class="hezi" src="../img/Cut _ Scissors.png">&#8195;选择材质</div>
+                <div class="specific-three">
+                    <div class="dyy">
+                        <div class="duikou">
+                            <input type="radio" name="sc" id="san" class="model" />
+                            <label for="san">三层A瓦优质</label>
+                        </div>
+                        <div class="feiji">
+                            <input type="radio" name="sc" id="ceng" class="model" />
+                            <label for="ceng">三层A瓦优质</label>
+                        </div>
+                        <div class="tiandi">
+                            <input type="radio" name="sc" id="sanc" class="model" />
+                            <label for="sanc">三层A瓦优质</label>
+                        </div>
+                    </div>
+
+                    <div class="byy">
+                        <div class="tiandi">
+                            <input type="radio" name="sc" id="awa" class="model" />
+                            <label for="awa">三层A瓦优质</label>
+                        </div>
+                        <div class="tiandi">
+                            <input type="radio" name="sc" id="youzhi" class="model" />
+                            <label for="youzhi">三层A瓦优质</label>
+                        </div>
+                    </div>
+                    <div class="details">
+                        查看详情<div class="blue"></div>
+                        <div class="menu">
+                            <p class="first">三层A瓦优质</p>
+                            <p class="first">三层A瓦优质</p>
+                            <p class="first">三层A瓦优质</p>
+                            <p class="first">三层A瓦优质</p>
+                            <p class="first">三层A瓦优质</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="next">
+                    <button class="pace">下一步</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- 底部蓝框内容 -->
+    <footer>
+        <div class="bag">
+            <div class="container">
+                <div class="row eight">
+                    <div class="col">
+                        <div class="tree">51包装网 — 纸箱包装首选服务平台</div>
+                    </div>
+                    <div class="col">
+                        <div class="eight-two">
+                            <div class="it">关于我们</div>
+                            <div class="best">配送流程</div>
+                            <div class="best">联系我们</div>
+                        </div>
+                        <div class="eight-one">
+                            <div class="it">下单指南</div>
+                            <div class="best">媒体介绍</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="eight-three">
+                            <div class="pt">
+                                <p class="contact">TEL:400-0000-000</p>
+                                <p class="contact ct">企业QQ：123456789</p>
+                                <p class="contact">微信号：XXXXXXX</p>
+                            </div>
+                            <div class="gzh"><img src="../img/qrcode_for_gh_32213eeb65ba_1280.png" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="finally">北京五一包装科技有限公司Copyright ©2015 51baozhuang.com015  All rights reserved 京icp备99999999-1</div>
+        </div>
+    </footer>
+</body>
+
+</html>

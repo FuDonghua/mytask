@@ -1,0 +1,541 @@
+body {
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    line-height: 20px;
+    font-size: 7px;
+    color: #FFFFFF;
+}
+
+.top-right {
+    display: flex;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.enter {
+    width: 50px;
+}
+
+.register {
+    width: 50px;
+}
+
+.enter:hover {
+    color: black;
+    background-color: #FFFFFF;
+}
+
+.register:hover {
+    color: black;
+    background-color: #FFFFFF;
+}
+
+/* 顶部选择栏 */
+.choice {
+    height: 50px;
+    background-color: #F9F9F9;
+}
+
+.choose {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+    font-size: 9px;
+}
+
+@media screen and (max-width: 768px) {
+    .choice {
+        padding-top: 60px;
+        height: 200px;
+        background-color: #F9F9F9;
+    }
+
+    .choose {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .home {
+        margin-top: 20px;
+        margin-left: 0 !important;
+        text-align: center;
+        width: 80px;
+    }
+}
+
+.home {
+    line-height: 25px;
+    padding: 0 10px;
+    margin-left: 30px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 1px 1px #999999;
+}
+
+.home:hover {
+    color: #FFFFFF;
+    background-color: #1D7AD9;
+}
+
+/* main */
+main{
+    margin-bottom: 40px;
+}
+.flow {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box {
+    position: relative;
+    width: 80px;
+}
+
+.rectangle {
+    margin-top: 25px;
+    width: 80px;
+    height: 3px;
+    background-color: #CCCCCC;
+}
+
+.round {
+    position: absolute;
+    top: 18px;
+    left: 32px;
+    line-height: 15px;
+    width: 15px;
+    font-size: 8px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 50%;
+    background-color: #CCCCCC;
+}
+
+.note {
+    font-size: 9px;
+    margin-top: 15px;
+    text-align: center;
+    color: #CCCCCC;
+}
+
+.box:hover .round {
+    background-color: #FF7F02;
+}
+
+.box:hover .rectangle {
+    background-color: #FF7F02;
+}
+
+.box:hover .note {
+    color: #FF7F02;
+}
+
+@media screen and (max-width: 768px) {
+    .flow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rectangle {
+        margin: 25px auto 0;
+    }
+
+    .round {
+        position: absolute;
+        top: 18px;
+        left: calc(50% - 7px);
+    }
+
+    .box {
+        margin: 0 auto;
+    }
+}
+
+/* 表格 */
+.step {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    border-left: 3px solid #1D7AD9;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.hezi {
+    margin: 0 0 3px 10px;
+}
+
+.box-type {
+    line-height: 30px;
+    font-size: 12px;
+    color: #1D7AD9;
+    background-color: #F4F4F4;
+}
+
+.specific-one {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 55px;
+    font-size: 12px;
+    color: #666666;
+    background-color: #FBFCFF;
+}
+
+.model {
+    margin-left: 15px;
+}
+
+input[type="radio"]+label::before {
+    content: "\a0";
+    /*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #D5D5D5;
+}
+
+input[type="radio"]:checked+label::before {
+    background-clip: border-box;
+    border: 8px solid #1D7AD9;
+}
+
+input[type="radio"] {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .specific-one {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 150px;
+    }
+
+    .model {
+        margin-top: 20px;
+    }
+}
+
+.specific-two {
+    position: relative;
+    height: 110px;
+    font-size: 12px;
+    color: #666666;
+    background-color: #FBFCFF;
+}
+
+.waijing {
+    display: flex;
+    align-items: flex-end;
+    height: 48px;
+}
+
+.neijing {
+    display: flex;
+    align-items: flex-end;
+    height: 48px;
+}
+
+.size {
+    display: flex;
+    margin-bottom: .5rem;
+}
+
+.size>div {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .specific-two {
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+    }
+
+    .specific-two .model {
+        margin-left: 15px;
+        height: 0;
+    }
+
+    .waijing {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-left: 31.3px;
+        height: 48px;
+    }
+
+    .neijing {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 105px 0 0 31.3px;
+        height: 48px;
+    }
+
+    .size {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .size>div {
+        margin: 10px 0 0 0;
+    }
+}
+
+.specific-three {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    font-size: 12px;
+    color: #666666;
+    background-color: #FBFCFF;
+}
+
+.byy {
+    display: flex;
+}
+
+.dyy {
+    display: flex;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .specific-three {
+        display: block;
+        height: 110px;
+    }
+
+    .dyy {
+        padding-top: 20px;
+    }
+
+    .byy {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .specific-three {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 250px;
+    }
+
+    .dyy {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .byy {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding-left: 10px;
+    width: 100px;
+    line-height: 30px;
+    font-size: 11px;
+    color: #999999;
+    background-color: #FFFFFF;
+}
+
+.blue {
+    margin-left: 20px;
+    width: 18px;
+    height: 20px;
+    background-color: #1D7AD9;
+}
+
+.blue::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top: 7px solid #FFFFFF;
+    position: absolute;
+    top: 36%;
+    left: 82%;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 100px;
+    color: #FFFFFF;
+    background-color: #999999;
+    z-index: 2;
+}
+
+.first {
+    margin: 0;
+    padding-left: 10px;
+    line-height: 30px;
+}
+
+.first:hover {
+    background-color: #1D7AD9;
+}
+
+.details:hover .menu {
+    display: block;
+}
+.next{
+    height: 160px;
+    text-align: center;
+}
+.pace{
+    margin-top: 65px;
+    border: none;
+    border-radius: 5px;
+    outline: none !important;
+    width: 90px;
+    height: 30px;
+    color: #FFFFFF;
+    background-color: #E15053;
+}
+/* 底部蓝框 */
+.anniu {
+    width: 40px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 0;
+    }
+}
+
+.eight {
+    font-size: 16px;
+    color: #999999;
+}
+
+.tree {
+    margin-top: 30px;
+}
+
+.fit {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+.web {
+    margin-top: 30px;
+}
+
+.eight-one {
+    margin-top: 20px;
+}
+
+.eight-two {
+    margin-top: 20px;
+}
+
+.it:hover {
+    color: #1D7AD9;
+}
+
+.best:hover {
+    color: #1D7AD9;
+}
+
+.it {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.best {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.eight-three {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.pt{
+    font-size: 11px;
+}
+.container-fluid {
+    padding: 0;
+}
+
+.finally {
+    line-height: 20px;
+    text-align: center;
+    background-color: #1D7AD9;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+
+.gzh {
+    text-align: right;
+    font-size: 13px;
+}
+
+.bag {
+    height: 120px;
+    background-color: #F9F9F9;
+}
+
+@media screen and (max-width: 768px) {
+    .eight {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .web {
+        margin-top: 100px;
+        text-align: left;
+    }
+
+    .gzh {
+        text-align: left;
+    }
+    .eight-two {
+        margin-top: 80px;
+    }
+    .eight-three {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 160px;
+    }
+
+    .bag {
+        height: 380px;
+    }
+
+    .finally {
+        margin-top: 376px;
+    }
+}
