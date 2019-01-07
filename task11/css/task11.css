@@ -1,0 +1,146 @@
+main .account .number input, main .locked input {
+  border: 0;
+  outline: none;
+}
+
+main .account .number input::-webkit-input-placeholder, main .locked input::-webkit-input-placeholder {
+  color: #BABABA;
+}
+
+main .account .number input:-ms-input-placeholder, main .locked input:-ms-input-placeholder {
+  color: #BABABA;
+}
+
+main .account .number input::-ms-input-placeholder, main .locked input::-ms-input-placeholder {
+  color: #BABABA;
+}
+
+main .account .number input::placeholder, main .locked input::placeholder {
+  color: #BABABA;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  background-color: #EFF0F4;
+}
+
+header {
+  height: 4.4rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #5FC0CD;
+  z-index: 1;
+}
+
+header .close {
+  position: absolute;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 4.4rem;
+}
+
+header .enter {
+  font-size: 1.7rem;
+  color: white;
+  text-decoration: none;
+  line-height: 4.4rem;
+}
+
+header .register {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 4.4rem;
+}
+
+main {
+  position: absolute;
+  top: 5.4rem;
+  left: 0;
+  right: 0;
+}
+
+main .account {
+  height: 5rem;
+  background-color: white;
+}
+
+main .account .phone {
+  width: 1.5rem;
+  height: 2rem;
+  margin: 1.5rem 0 0 2.2rem;
+  padding: 0 2rem 0 0;
+  border-right: 0.1rem solid #BABABA;
+  float: left;
+  background: url(../img/iphone.png) no-repeat;
+}
+
+main .account .number {
+  width: 9.5rem;
+  height: 1.6rem;
+  margin: 1.7rem 0 0 1.7rem;
+  float: left;
+}
+
+main .locked {
+  height: 5rem;
+  margin: 1rem 0;
+  background-color: white;
+}
+
+main .locked .lock {
+  width: 1.6rem;
+  height: 2.2rem;
+  margin: 1.4rem 0 0 2.2rem;
+  padding: 0 2rem 0 0;
+  border-right: 0.1rem solid #BABABA;
+  float: left;
+  background: url(../img/locked.png) no-repeat;
+}
+
+main .locked .pwd {
+  width: 9.5rem;
+  height: 1.6rem;
+  margin: 1.7rem 0 0 1.7rem;
+  float: left;
+}
+
+footer {
+  position: relative;
+  top: 17.4rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #5FC0CD;
+}
+
+footer .entering {
+  height: 4.4rem;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  background-color: #5FC0CD;
+}
+
+.remember {
+  margin: 18.3rem 0 0 0;
+  width: 6rem;
+  float: right;
+}
+
+.remember .forget {
+  font-size: 1rem;
+  color: red;
+}
+/*# sourceMappingURL=task11.css.map */

@@ -1,0 +1,142 @@
+$color: white;
+%input {
+    border: 0;
+    outline: none;
+    &::placeholder {
+        color: #BABABA;
+    }
+}
+@mixin position ($way, $value) {
+    position: $way;
+    top: $value;
+    left: 0;
+    right: 0;
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    margin: 0;
+    background-color: #EFF0F4;
+}
+
+header {
+    height: 4.4rem;
+    text-align: center;
+    @include position (absolute,0);
+    background-color: #5FC0CD;
+    z-index: 1;
+
+    .close {
+        position: absolute;
+        left: 1.5rem;
+        font-size: 1.5rem;
+        color: $color;
+        text-decoration: none;
+        line-height: 4.4rem;
+    }
+
+    .enter {
+        font-size: 1.7rem;
+        color: $color;
+        text-decoration: none;
+        line-height: 4.4rem;
+    }
+
+    .register {
+        position: absolute;
+        right: 1.5rem;
+        font-size: 1.5rem;
+        color: $color;
+        text-decoration: none;
+        line-height: 4.4rem;
+    }
+}
+
+main {
+    @include position ( absolute ,5.4rem);
+
+    .account {
+        height: 5rem;
+        background-color: $color;
+
+        .phone {
+            width: 1.5rem;
+            height: 2rem;
+            margin: 1.5rem 0 0 2.2rem;
+            padding: 0 2rem 0 0;
+            border-right: 0.1rem solid #BABABA;
+            float: left;
+            background: url(../img/iphone.png) no-repeat;
+        }
+
+        .number {
+            width: 9.5rem;
+            height: 1.6rem;
+            margin: 1.7rem 0 0 1.7rem;
+            float: left;
+
+            input {
+                @extend %input;
+            }
+        }
+
+    }
+
+    .locked {
+        height: 5rem;
+        margin: 1rem 0;
+        background-color: $color;
+
+        .lock {
+            width: 1.6rem;
+            height: 2.2rem;
+            margin: 1.4rem 0 0 2.2rem;
+            padding: 0 2rem 0 0;
+            border-right: 0.1rem solid #BABABA;
+            float: left;
+            background: url(../img/locked.png) no-repeat;
+        }
+
+        .pwd {
+            width: 9.5rem;
+            height: 1.6rem;
+            margin: 1.7rem 0 0 1.7rem;
+            float: left;
+        }
+        input {
+            @extend %input;
+        }
+
+    }
+}
+
+footer {
+    position: relative;
+    top: 17.4rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #5FC0CD;
+
+    .entering {
+        height: 4.4rem;
+        border: none;
+        font-size: 1.8rem;
+        color: $color;
+        background-color: #5FC0CD;
+    }
+}
+
+.remember {
+    margin: 18.3rem 0 0 0;
+    width: 6rem;
+    float: right;
+
+    .forget {
+        font-size: 1rem;
+        color: red;
+    }
+}
