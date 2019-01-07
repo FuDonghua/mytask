@@ -1,0 +1,203 @@
+html {
+  font-size: 625%;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: .44rem;
+  z-index: 2;
+  background-color: #5FC0CD;
+  text-align: center;
+}
+
+header .back {
+  position: absolute;
+  left: .18rem;
+  line-height: .44rem;
+  font-size: .18rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+header .person {
+  line-height: .44rem;
+  margin: 0;
+  font-size: .18rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+main {
+  position: relative;
+  top: .44rem;
+}
+
+main .picture {
+  height: 1.63rem;
+  background: url(../img/rectangle.png) no-repeat;
+  background-size: 100% 101%;
+}
+
+main .picture .introduce {
+  position: absolute;
+  top: .4rem;
+  left: .15rem;
+  height: .84rem;
+  width: 3rem;
+}
+
+main .picture .introduce .photo {
+  display: block;
+}
+
+main .picture .introduce .name {
+  position: absolute;
+  top: .19rem;
+  left: 1.2rem;
+  font-size: .18rem;
+  color: #FFFFFF;
+}
+
+main .picture .introduce .age {
+  position: absolute;
+  top: .21rem;
+  left: 1.9rem;
+  font-size: .14rem;
+  color: #FFFFFF;
+}
+
+main .picture .introduce .address {
+  position: absolute;
+  top: .48rem;
+  left: 1.2rem;
+  font-size: .12rem;
+  color: #FFFFFF;
+}
+
+main .form {
+  margin-bottom: 1rem;
+}
+
+main .form ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+main .form ul .first {
+  border-bottom: .01rem solid #E1E5E7;
+  line-height: .26rem;
+  font-size: .16rem;
+  color: #333333;
+  font-weight: 600;
+}
+
+main .form ul .first .special {
+  margin-left: 2%;
+  padding-left: 2%;
+  border-left: .01rem solid #5FC0CD;
+}
+
+main .form ul .second {
+  margin: 0 .1rem;
+  border-bottom: .01rem solid #E1E5E7;
+  line-height: .26rem;
+  font-size: .16rem;
+  color: #333333;
+  font-weight: 600;
+}
+
+main .form ul .number {
+  margin: 0 .1rem;
+  border-bottom: .01rem solid #E1E5E7;
+  line-height: .26rem;
+  font-size: .16rem;
+  color: #999999;
+  font-weight: 550;
+}
+
+main .form ul .number .mode {
+  border-right: .01rem solid #E1E5E7;
+}
+
+main .form ul .number .anwser {
+  font-size: .16rem;
+  color: #333333;
+}
+
+main .form ul .number .another {
+  font-size: .16rem;
+  color: #E26163;
+}
+
+main .form .lasted {
+  margin: 0 .1rem;
+  border-bottom: .01rem solid #E1E5E7;
+  position: relative;
+  padding: .06rem 0;
+}
+
+main .form .lasted .last {
+  display: block;
+  font-size: .16rem;
+  color: #333333;
+  margin-left: .8rem;
+  margin-right: .1rem;
+}
+
+main .form .lasted .made {
+  border-right: .01rem solid #E1E5E7;
+  font-size: .16rem;
+  color: #999999;
+  position: absolute;
+  top: calc(50% - .08rem);
+}
+
+main span {
+  padding-right: .1rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: initial;
+  background-color: #FFFFFF;
+}
+
+footer .message {
+  padding: 0;
+  margin: .1rem 0 .1rem .1rem;
+  width: calc(50% - .15rem);
+  border: .01rem solid #5FC0CD;
+  border-radius: .1rem;
+  height: .44rem;
+  font-size: .17rem;
+  background-color: #FFFFFF;
+  color: #5FC0CD;
+  outline: none;
+}
+
+footer .telephone {
+  width: calc(50% - .15rem);
+  padding: 0;
+  height: .44rem;
+  margin-left: .05rem;
+  border: .01rem solid #FFFFFF;
+  border-radius: .1rem;
+  font-size: .17rem;
+  background-color: #5FC0CD;
+  color: #FFFFFF;
+  outline: none;
+}
+/*# sourceMappingURL=task12-1.css.map */

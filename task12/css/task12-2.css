@@ -1,0 +1,283 @@
+html {
+  font-size: 625%;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+button {
+  outline: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: .44rem;
+  z-index: 2;
+  background-color: #5FC0CD;
+}
+
+header .employer {
+  height: .35rem;
+  width: .8rem;
+  border: .01rem solid #55A8B3;
+  border-radius: .1rem 0 0 .1rem;
+  font-size: .17rem;
+  background-color: #55A8B3;
+  color: #FFFFFF;
+  outline: none;
+}
+
+header .employer:hover {
+  color: #5FC0CD;
+  background-color: #FFFFFF;
+}
+
+header .nurse {
+  position: relative;
+  right: .08rem;
+  height: .35rem;
+  width: .72rem;
+  border: .01rem solid #5FC0CD;
+  border-radius: .1rem;
+  font-size: .17rem;
+  background-color: #FFFFFF;
+  color: #5FC0CD;
+  outline: none;
+}
+
+header .nurse:hover {
+  color: #FFFFFF;
+  background-color: #55A8B3;
+}
+
+header .top-right {
+  position: absolute;
+  right: .15rem;
+  top: .11rem;
+  width: .22rem;
+  height: .22rem;
+  background: url(../img/css_sprites.png) no-repeat -77px -10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: .56rem;
+  background-color: #F8FAFB;
+}
+
+footer .home {
+  width: .47rem;
+  height: .47rem;
+  background: url(../img/css_sprites.png) no-repeat -10px -10px;
+}
+
+footer .house {
+  position: absolute;
+  left: 20%;
+  top: .06rem;
+  width: .23rem;
+  height: .2rem;
+  background: url(../img/css_sprites.png) no-repeat -10px -77px;
+}
+
+footer .first {
+  position: absolute;
+  left: 20%;
+  top: .33rem;
+  width: .24rem;
+  height: .1rem;
+  font-size: .1rem;
+  color: #5FC0CD;
+}
+
+footer .person {
+  position: absolute;
+  right: 20%;
+  top: .06rem;
+  width: .21rem;
+  height: .21rem;
+  background: url(../img/css_sprites.png) no-repeat -118px -10px;
+}
+
+footer .mine {
+  position: absolute;
+  right: 20%;
+  top: .33rem;
+  width: .24rem;
+  height: .1rem;
+  font-size: .1rem;
+  color: #999999;
+}
+
+main {
+  position: relative;
+  top: .44rem;
+  margin-bottom: .56rem;
+}
+
+main .location {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: .4rem;
+  border-bottom: .01rem solid #E1E5E7;
+  z-index: 1;
+}
+
+main .location .seat {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  border-right: .01rem solid #E1E5E7;
+  padding: 0;
+  font-size: .14rem;
+  background-color: #FFFFFF;
+  color: #999999;
+  cursor: pointer;
+}
+
+main .location .seat:hover .site {
+  display: block;
+}
+
+main .location .seat .triangle {
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  width: .07rem;
+  height: .04rem;
+  background: url(../img/css_sprites.png) no-repeat -118px -88px;
+}
+
+main .location .seat .site {
+  display: none;
+  position: absolute;
+  top: .4rem;
+  width: 100%;
+  background-color: #E1E5E7;
+}
+
+main .location .seat .site .locus {
+  text-decoration: none;
+  display: block;
+  color: #5FC0CD;
+  background-color: #FFFFFF;
+}
+
+main .location .seat .site .locus:hover {
+  color: #FFFFFF;
+  background-color: #5FC0CD;
+}
+
+main ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main ul .one {
+  position: relative;
+  height: .9rem;
+  border-bottom: .01rem solid #E1E5E7;
+}
+
+main ul .one .calendar {
+  position: absolute;
+  top: .15rem;
+  left: .15rem;
+  width: .12rem;
+  height: .12rem;
+  background: url(../img/css_sprites.png) no-repeat -53px -77px;
+}
+
+main ul .one .serve {
+  position: absolute;
+  top: .12rem;
+  left: .35rem;
+  width: .6rem;
+  height: .14rem;
+  font-size: .12rem;
+  color: #999999;
+}
+
+main ul .one .time {
+  margin-left: .34rem;
+  height: .14rem;
+  font-size: .14rem;
+  color: #333333;
+}
+
+main ul .one .money {
+  position: absolute;
+  right: .36rem;
+  font-size: .14rem;
+  color: #E63B0E;
+}
+
+main ul .one .greater {
+  position: absolute;
+  top: .37rem;
+  right: .16rem;
+  width: .1rem;
+  height: .17rem;
+  background: url(../img/css_sprites.png) no-repeat -118px -51px;
+}
+
+main ul .one .place {
+  position: absolute;
+  top: .63rem;
+  left: .16rem;
+  width: .1rem;
+  height: .12rem;
+  background: url(../img/css_sprites.png) no-repeat -85px -77px;
+}
+
+main ul .one .place-name {
+  position: absolute;
+  top: .62rem;
+  left: .33rem;
+  width: .84rem;
+  height: .13rem;
+  font-size: .12rem;
+  color: #999999;
+}
+/*# sourceMappingURL=task12-2.css.map */
