@@ -13,6 +13,7 @@ $color: white;
     right: 0;
 }
 
+
 html {
     font-size: 62.5%
 }
@@ -25,7 +26,7 @@ body {
 header {
     height: 4.4rem;
     text-align: center;
-    @include position (absolute,0);
+    @include position (fixed,0);
     background-color: #5FC0CD;
     z-index: 1;
 
@@ -137,6 +138,6 @@ footer {
 
     .forget {
         font-size: 1rem;
-        color: red;
+        color: #5FC0CD;
     }
 }
