@@ -1,3 +1,11 @@
+/* 变量 */
+$font-size: .17rem;
+$eliminate: 0;
+$border: none;
+$color: #FFFFFF;
+$background-color: #29BDE0;
+
+
 @mixin flex($x:center, $y:center) {
     display: flex;
     justify-content: $x;
@@ -19,16 +27,21 @@ body {
     font-size: initial;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; 
+ul,
+li,
+button,
+p {
+    margin: $eliminate;
+    padding: $eliminate;
+    list-style: $border;
+    border: $border;
+    outline: $border;
 }
 
 p {
     margin: 0;
 }
-
+ 
 a {
     text-decoration: none;
 }
