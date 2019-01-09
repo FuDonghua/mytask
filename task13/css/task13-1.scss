@@ -1,0 +1,180 @@
+@mixin flex($x:center, $y:center) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+@mixin w-h ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+html { 
+    font-size: 625%;
+}
+
+/*去除默认属性*/
+body {
+    margin: 0;
+    font-size: initial;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.all {
+    background-color: #F0F0F0;
+    overflow-y: hidden;
+}
+
+button {
+    border: none;
+}
+
+/*隐藏checked复选框*/
+#sidemenu {
+    display: none;
+}
+
+#sidemenu:checked~.container {
+    right: -70vw;
+    /*点击按钮即选中checked后,侧边栏位置变为贴着左边,配合ease-out使用,有渐变滑出的效果*/
+}
+
+/* 菜单框 */
+.sideul {
+    position: absolute;
+    width: 70vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+
+    li {
+        @include flex(space-around);
+        height: 40px;
+        font-size: 20px;
+        border-bottom: 1px solid #F0F0F0;
+        color: #29BDE0;
+
+        .arrow {
+            @include w-h( .2rem, .2rem);
+            border-top: .02rem solid #69D1E9;
+            border-right: .02rem solid #69D1E9;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.container {
+    position: relative;
+    right: 0;
+    height: 100vh;
+    background: #F0F0F0;
+    transition: 1s;
+
+    header {
+        height: .44rem;
+        background-color: #29BDE0;
+
+        #control {
+            font-size: 30px;
+            color: #FFFFFFFF;
+            padding: 0 10px;
+            margin-left: 10px;
+        }
+    }
+
+    main {
+        margin: .15rem .15rem 0 .15rem;
+        background-color: #F0F0F0;
+
+        .ghost {
+            line-height: .58rem;
+            text-align: center;
+            font-size: .17rem;
+            color: #9A9A9A;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 10px -3px;
+            .enter {
+                position: absolute;
+                top: .8rem;
+                right: .25rem;
+                width: .12rem;
+                height: .2rem;
+                background: url(../img/css_sprites-1.png) no-repeat -44px -10px;
+            }
+        }
+
+        .game {
+            margin-top: .15rem;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 10px -3px;
+
+            .play {
+                margin: 0;
+                padding-top: .15rem;
+                text-align: center;
+                height: .45rem;
+                border-bottom: .01rem solid #FBB435;
+                font-size: .19rem;
+                font-weight: lighter;
+                color: #FBB435;
+            }
+
+            .easy {
+                display: block;
+                height: .67rem;
+                width: calc(100% - .5rem);
+                margin: .15rem .25rem;
+                font-size: .16rem;
+                color: #FFFFFF;
+                background-color: #69D1E9;
+            }
+
+            .introduction {
+                text-align: center;
+                font-size: .12rem;
+                color: #787878;
+            }
+
+            .next {
+                position: absolute;
+                top: 340px;
+                right: 20px;
+                width: .14rem;
+                height: .28rem;
+                background: url(../img/css_sprites-1.png) no-repeat -10px -10px;
+            }
+
+            .dot {
+                display: flex;
+                justify-content: space-between;
+                margin: .1rem auto;
+                padding-bottom: .1rem;
+                width: .47rem;
+
+                .spot {
+                    background-color: #69D1E9 !important;
+                }
+
+                .dot>span {
+                    @include w-h( .08rem, .08rem);
+                    border-radius: 50%;
+                    background-color: #F0F0F0;
+                }
+            }
+        }
+
+    }
+}
