@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/* 变量 */
+/* 混合 */
+html {
+  font-size: 625%;
+}
+
+ul,
+li,
+button,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+}
+
+body {
+  margin: 0;
+  font-size: initial;
+  background-color: #29BDE0;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #29BDE0;
+  z-index: 1;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 .12rem;
+  height: .44rem;
+  background-color: #29BDE0;
+}
+
+header .list {
+  width: .2rem;
+  height: .2rem;
+  border: .02rem solid #FFFFFF;
+}
+
+header .list .three {
+  width: 0.16rem;
+  height: 0.02rem;
+  border-top: .02rem solid #FFFFFF;
+  border-bottom: .02rem solid #FFFFFF;
+  padding: .04rem 0;
+  margin: .03rem .02rem;
+  background-clip: content-box;
+  background-color: #FFFFFF;
+}
+
+header .title {
+  font-size: .17rem;
+  color: #FFFFFF;
+}
+
+header .close {
+  position: relative;
+  width: .2rem;
+  height: .2rem;
+}
+
+header .close::before, header .close::after {
+  content: "";
+  position: absolute;
+  top: .02rem;
+  right: .09rem;
+  width: .02rem;
+  height: .2rem;
+  background-color: #FFFFFF;
+}
+
+header .close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header .close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+main {
+  margin-bottom: .9rem;
+}
+
+main .point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: .44rem;
+  height: .4rem;
+  padding: 0 .1rem 0 .2rem;
+  background-color: #CCEEFF;
+}
+
+main .point .freedom {
+  position: absolute;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 1;
+  opacity: 0;
+}
+
+main .point .explain {
+  font-size: .14rem;
+  color: #464646;
+}
+
+main .point .play {
+  position: relative;
+  width: .26rem;
+  height: .26rem;
+  border-radius: 50%;
+  background-color: #FBB435;
+}
+
+main .point .play::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0.08rem solid transparent;
+  border-left: 0.13rem solid #FFFFFF;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+main .triangle {
+  margin-left: .35rem;
+  width: 0;
+  height: 0;
+  border: .04rem solid transparent;
+  border-top: .07rem solid #CCEEFF;
+}
+
+main .click {
+  margin-bottom: .22rem;
+  margin-left: .35rem;
+  font-size: .14rem;
+  color: #FFFFFF;
+}
+
+main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+main .container .item {
+  width: 20vw;
+  height: 20vw;
+  text-align: center;
+  margin: 0 5vw 10vw 5vw;
+  border: 1vw solid #FFFFFF;
+}
+
+main .container .item .name {
+  width: 100%;
+  font-size: 5vw;
+  line-height: 16vw;
+  background-color: #FBB435;
+}
+
+main .container .item .number {
+  width: 100%;
+  line-height: 4.4vw;
+  font-size: 4vw;
+  color: #FFFFFF;
+  background-color: #1A99B7;
+}
+
+main .container .item:hover ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .item ul {
+  margin-top: 3vw;
+  padding: 0;
+  width: 23vw;
+  height: 5vw;
+  display: none;
+  list-style-type: none;
+}
+
+main .container .item ul .first {
+  width: 5vw;
+  height: 5vw;
+  background: url(../img/css_sprites-2.png) no-repeat 8% 50%/930%;
+}
+
+main .container .item ul .second {
+  width: 5vw;
+  height: 5vw;
+  background: url(../img/css_sprites-2.png) no-repeat 36% 50%/930%;
+}
+
+main .container .item ul .third {
+  width: 5vw;
+  height: 5vw;
+  background: url(../img/css_sprites-2.png) no-repeat 64% 50%/930%;
+}
+
+main .container .item ul .fourth {
+  width: 5vw;
+  height: 5vw;
+  background: url(../img/css_sprites-2.png) no-repeat 92% 50%/930%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: .9rem;
+  background-color: #29BDE0;
+}
+
+footer .boundary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90vw;
+  height: .9rem;
+  border-top: .01rem solid #FFFFFF;
+}
+
+footer .choice {
+  border: none;
+  width: 77vw;
+  height: .44rem;
+  font-size: .18rem;
+  color: #FFFFFF;
+  background-color: #FBB435;
+}
+/*# sourceMappingURL=task13-2.css.map */
