@@ -1,0 +1,102 @@
+/* 底部蓝框 */
+.bag {
+    height: 170px;
+    background-color: #26A26F;
+
+    .eight {
+        font-size: 16px;
+        color: #FFFFFF;
+
+        .tree {
+            margin-top: 30px;
+        }
+
+        .fit {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .web {
+            margin-top: 30px;
+        }
+
+        .eight-one {
+            margin-top: 20px;
+
+            .it {
+                display: inline-block;
+                font-size: 14px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .best {
+                display: inline-block;
+                padding-left: 10px;
+                font-size: 14px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .eight-three {
+            margin-top: 10px;
+
+            .gzh {
+                text-align: right;
+                font-size: 13px;
+            }
+        }
+
+    }
+}
+
+.finally {
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    text-align: center;
+    background-color: #26A26F;
+    font-size: 16px;
+    color: #FFFFFF;
+
+}
+
+@media (max-width: 768px) {
+    .bag {
+        height: 350px;
+        background-color: #26A26F;
+
+        .eight {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+
+            .web {
+                margin-top: 20px;
+                text-align: left;
+            }
+
+            .eight-one {
+                display: flex;
+                justify-content: left;
+                margin-top: 10px;
+            }
+
+            .eight-three {
+                margin-top: 20px;
+
+                .gzh {
+                    text-align: left;
+                }
+            }
+        }
+
+        .finally {
+            margin-top: 0;
+        }
+    }
+}

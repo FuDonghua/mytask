@@ -1,0 +1,77 @@
+main {
+    margin-bottom: 100px;
+    .oo {
+        width: 100%;
+    }
+    .all {
+        margin-top: 17px;
+        .start {
+            font-size: 8px;
+            .page {
+                color: #333333;
+            }
+            
+            .partner {
+                color: #29B078 !important;
+            }
+        }
+        .two-one {
+            margin-top: 15px;
+            padding: 0;
+            .cooperate {
+                padding: 11px 30px;
+                border-bottom: 2px solid rgba(250, 250, 250, .5);
+                text-align: center;
+                font-size: 11px;
+                color: #333333;
+            }
+            .business {
+                width: 80px;
+                text-align: center;
+                margin: 5px auto;
+                color: #FFBB00;
+                list-style-type: circle;
+                &:hover {
+                    list-style-type: disc;
+                }
+            }
+            
+            .name {
+                font-size: 11px;
+                line-height: 40px;
+                color: #29B078 !important;
+                &:hover {
+                    color: red !important;
+                }
+            }
+        }
+        .two-two {
+            margin-top: 15px;
+            padding: 0;
+            .headline {
+                background-color: #FFFFFF;
+                box-shadow: 1px 1px 1px 1px #999999;
+                .tudo {
+                    padding: 20px 40px;
+                    border-bottom: 2px solid rgba(250, 250, 250, .5);
+                    .tdw {
+                        float: left;
+                    }
+                    .essay {
+                        font-size: 7px;
+                        color: #999999;
+                    }
+                }
+                .introduction {
+                    padding: 20px 40px;
+                    border-bottom: 2px solid rgba(250, 250, 250, .5);
+                    font-size: 7px;
+                    color: #999999;
+                    .first {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

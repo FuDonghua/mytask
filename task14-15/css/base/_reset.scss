@@ -1,0 +1,22 @@
+//去除默认属性
+html {
+    font-size: 625%;
+}
+
+body {
+    margin: 0;
+    font-size: initial;
+    background: #FAFAFA;
+}
+
+ul,
+button,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}

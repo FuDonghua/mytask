@@ -1,0 +1,34 @@
+//变量
+$white: #FFFFFF;
+$green: #29B078;
+$black: #333333;
+$gray: #999999;
+$red: #F01400;
+$orange: #FF650E;
+$bgwhite: #FFFFFF;
+
+//混合
+@mixin flex ($x:center, $y:center) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+@mixin w-h($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin text($t:center, $h:0) {
+    text-align: $t;
+    line-height: $h;
+}
+
+@mixin positio($p:relative, $l:0, $r:0) {
+    position: $p;
+    left: $l;
+    right: $r;
+    background: $bgwhite;
+}
+
+//占位符

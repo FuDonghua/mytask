@@ -1,0 +1,70 @@
+.rotation {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+
+    .img {
+        display: flex;
+        flex-wrap: nowrap;
+        position: absolute;
+        left: 0;
+        width: 600vw;
+        animation: rotation 15s linear infinite;
+
+        .first {
+            height: 600px;
+            width: 100vw;
+        }
+    }
+}
+
+@keyframes rotation {
+    0% {
+        left: 0;
+    }
+
+    9% {
+        left: 0;
+    }
+
+    18% {
+        left: -100vw;
+    }
+
+    27% {
+        left: -100vw;
+    }
+
+    36% {
+        left: -200vw;
+    }
+
+    45% {
+        left: -200vw;
+    }
+
+    54% {
+        left: -300vw;
+    }
+
+    63% {
+        left: -300vw;
+    }
+
+    72% {
+        left: -400vw;
+    }
+
+    81% {
+        left: -400vw;
+    }
+
+    90% {
+        left: -500vw;
+    }
+
+    100% {
+        left: -500vw;
+    }
+}

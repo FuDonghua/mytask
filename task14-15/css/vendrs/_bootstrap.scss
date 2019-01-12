@@ -1,0 +1,85 @@
+//盒子
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+//容器
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+//行
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+// 列，使用for循环写
+//  @for $var from 1 to 12 {
+//   .col-#{$var} {
+//     flex: 0 0 100%/12*$var;
+//     width: 100%/12*$var;
+//     margin: 0 15px;
+//   }
+// }
+
+//媒体查询的基本设置
+//sm
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+//md
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+//lg
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+//xl
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+//列的媒体查询
+$list:(sm:576px, md:768px, lg:992px, xl:1200px);
+
+@each $q,
+$w in $list {
+  @media (min-width: $w) {
+    .col-#{$q} {
+      flex-basis: 0;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+
+    @for $var from 1 through 12 {
+      .col-#{$q}-#{$var} {
+        flex: 0 0 100%/12*$var;
+        position: relative;
+        max-width: 100%/12*$var;
+        padding: 0 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.top{
+    background-color: #FFFFFF;
+}
+.one {
+    display: flex;
+    justify-content: space-between;
+}
+.phone{
+    line-height: 40px;
+    font-size: 14px;
+    color: #29B078;
+}
+.top-right {
+    display: flex;
+    height: 24px;
+    justify-content: flex-end;
+}
+
+.wx {
+    margin: 8px 20px 8px 0;
+    width: 25px;
+    height: 24px;
+    background: url(../../img/css_sprites.png) no-repeat -63px -0;
+}
+
+.qq {
+    margin: 8px 20px 8px 0;
+    width: 25px;
+    height: 24px;
+    background: url(../../img/css_sprites.png) no-repeat -13px -0;
+}
+
+.wb {
+    margin: 8px 0 8px 0;
+    width: 25px;
+    height: 24px;
+    background: url(../../img/css_sprites.png) no-repeat -38px -0;
+}
