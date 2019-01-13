@@ -695,6 +695,42 @@ main {
   border-bottom: 1px solid #D0D6D9;
 }
 
+.direction {
+  padding: 3px 0;
+  margin-right: 10px;
+  color: #999999;
+}
+
+.items {
+  margin-right: 15px;
+  padding: 3px 5px;
+}
+
+.items:hover {
+  color: #FFFFFF;
+  background-color: #29B078;
+}
+
+.item-two {
+  margin-right: 15px;
+  padding: 3px 5px;
+  color: #333333;
+}
+
+.item-two:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #29B078;
+}
+
+.web-two {
+  padding: 20px 0;
+  font-size: 10px;
+  font-weight: bold;
+  color: #333333;
+  border-bottom: 1px solid #D0D6D9;
+}
+
 @media screen and (max-width: 768px) {
   .project {
     display: -webkit-box;
@@ -711,45 +747,13 @@ main {
   }
 }
 
-.direction {
-  padding: 3px 0;
-  margin-right: 10px;
-  color: #999999;
-}
-
-.items {
-  margin-right: 15px;
-  padding: 3px 5px;
-}
-
-.item-two {
-  margin-right: 15px;
-  padding: 3px 5px;
-  color: #333333;
-}
-
-.item-two:hover {
-  text-decoration: none;
-  color: #FFFFFF;
-  background-color: #29B078;
-}
-
-.items:hover {
-  color: #FFFFFF;
-  background-color: #29B078;
-}
-
 /* 第四行+表格 */
-.web-two {
-  padding: 20px 0;
-  font-size: 10px;
-  font-weight: bold;
-  color: #333333;
-  border-bottom: 1px solid #D0D6D9;
+.four-one {
+  position: relative;
 }
 
 table {
-  margin: 20px 20px 20px 0;
+  margin: 20px 0;
   border-collapse: collapse;
   max-width: 100%;
   -webkit-box-shadow: 1px 1px 1px 1px #999999;
@@ -767,13 +771,6 @@ table {
   font-weight: bold;
   color: #333333;
   margin-bottom: 5px;
-}
-
-.table td,
-.table th {
-  padding: 9px;
-  border-top: 1px solid #dee2e6;
-  vertical-align: middle;
 }
 
 .essay {
@@ -852,6 +849,19 @@ table {
   font-weight: bold;
   color: #333333;
   border-bottom: 1px solid #D0D6D9;
+}
+
+.table td,
+.table th {
+  padding: 9px;
+  border-top: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+@media (max-width: 576px) {
+  .row {
+    margin: 0;
+  }
 }
 
 /* 底部蓝框 */
