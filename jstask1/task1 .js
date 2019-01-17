@@ -2,7 +2,6 @@ var wrap = document.getElementsByClassName("box");
         console.log(wrap);
 
         function colors() { //选取的rgb颜色
-            var rgb
             var r = Math.floor(Math.random() * 256);
             var g = Math.floor(Math.random() * 256);
             var b = Math.floor(Math.random() * 256);
