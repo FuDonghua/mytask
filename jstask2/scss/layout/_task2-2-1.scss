@@ -1,0 +1,39 @@
+main {
+    position: relative;
+    border-top: 0.01rem solid rgba(255, 255, 255, 0.5); 
+
+    .number {
+        position: absolute;
+        top: .3rem;
+        left: calc(50% - .2rem);
+        width: .4rem;
+        @include text(center, .4rem);
+        border: .02rem solid #FFEDC5;
+        border-radius: 50%;
+        font-size: .17rem;
+        color: red;
+        background-color: #FFFFFFFF;
+    }
+
+    .frame {
+        @include w-h(70%, 3rem);
+        margin: .5rem auto;
+        border: .02rem solid #FFFFFFFF;
+        background-color: #FFEDC5;
+
+        img {
+            display: block;
+            width: 1.5rem;
+            margin: .75rem auto;
+        }
+    }
+
+    button {
+        @include w-h(80%, .5rem);
+        margin: 0 10%;
+        border-radius: .05rem;
+        font-size: .17rem;
+        color: #FFFFFFFF;
+        background-color: orange;
+    }
+}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jstask2-3-1</title>
+    <link rel="stylesheet" type="text/css" href="../../scss/body/jstask2-3-1.css" />
+</head>
+
+<body>
+    <header>
+        <a onclick="back()" class="back"></a>
+        <h5>法官台本</h5>
+        <a class="home" onclick="home()">
+            <span></span>
+        </a>
+    </header>
+    <main>
+        <div class="items" id="role-0">
+            <button class="days">
+                第<span class="number">一</span>天
+                <span class="next"></span>
+            </button>
+            <div class="menu">
+                <span class="triangle"></span>
+                <div class="sun">
+                    <img src="../../img/sun.png" style="width: 100%;">
+                </div>
+                <div class="moon">
+                    <img src="../../img/moon.png" style="width: 100%;">
+                </div>
+                <div class="wrap">
+                    <div class="box">
+                        <button class="killing">杀手杀人<i class="first"></i></button>
+                        <p class="cut"></p>
+                        <button class="dead">亡灵发表遗言<i class="second"></i></button>
+                        <button class="decument">玩家依次发言<i class="third"></i></button>
+                        <button class="vote">全民投票<i class="fourth"></i></button>
+                        <p class="push"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button onclick="home()" class="again">结束游戏</button>
+        <button onclick="location='../jstask2-2/jstask2-2-3.html'" class="upload">法官日志</button>
+    </footer>
+    <script src="../../js/state-machine.js"></script>
+    <script>
+        //提取数据
+        var playerArray = JSON.parse(sessionStorage.getItem("player")); //提取牌组
+        console.log(playerArray)
+        var math = sessionStorage.getItem("numble"); //玩家人数
+        console.log(math)
+        var days = sessionStorage.getItem('day');
+        console.log(days)
+        var step = sessionStorage.getItem('steps');
+        console.log(step)
+        //设置变量
+        var sourceNode = document.getElementById("role-0"); // 获得被克隆的节点对象 
+        var items = document.getElementsByClassName('items');
+        console.log(items)
+        var death = document.getElementsByClassName('cut');
+        var votedeath = document.getElementsByClassName('push');
+        //自运行事件
+        window.onload = function () {
+
+
+            console.log(sourceNode)
+            if (days == null) {
+                days = 0;
+            }
+            // console.log(days)
+            for (let i = 0; i <= days; i++) {
+
+                if (i > 0) {
+                    var clonedNode = sourceNode.cloneNode(true); // 克隆节点 
+                    clonedNode.setAttribute("id", "role-" + i); // 修改一下id 值，避免id 重复 
+                    sourceNode.parentNode.appendChild(clonedNode); // 在父节点插入克隆的节点
+                    //显示投票死的玩家信息
+                    var choseplayer = JSON.parse(sessionStorage.getItem("chosedplayers")); //被投票死的玩家数组
+                    console.log(choseplayer)
+                    var votenumber = choseplayer[i - 1];
+                    console.log(votenumber)
+                    votedeath[i - 1].innerHTML = [votenumber + 1] + '号被投死，真实身份为' + playerArray[votenumber];
+                    sessionStorage.setItem("chosedplayers", JSON.stringify(choseplayer));
+                }
+
+                if (i == days) {
+                    votedeath[i].innerHTML = '';
+                }
+                //显示杀手杀死玩家的死亡信息
+                console.log(i)
+                if (i == days) {
+                    death[i].innerHTML = '';
+                }
+                var chooseplayers = JSON.parse(sessionStorage.getItem("chosingplayers")); //被杀手杀死的玩家数组
+                console.log(chooseplayers)
+                if (chooseplayers != null && chooseplayers[i] != undefined) {
+                    var deathnumber = +chooseplayers[i];
+                    death[i].innerHTML = [deathnumber + 1] + '号被杀死，真实身份为' + playerArray[deathnumber];
+                }
+                sessionStorage.setItem("chosingplayers", JSON.stringify(chooseplayers));
+                //第n天的下拉框状态
+                if (i != days) {
+                    items[i].getElementsByClassName('menu')[0].style.display = 'none';
+                } else {
+                    items[i].getElementsByClassName('menu')[0].style.display = 'block';
+                }
+                var daysArray = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
+                items[i].getElementsByClassName('number')[0].innerHTML = daysArray[i];
+                items[i].getElementsByClassName('days')[0].onclick = function () {
+                    if (items[i].getElementsByClassName('menu')[0].style.display == 'block') {
+                        items[i].getElementsByClassName('menu')[0].style.display = 'none';
+                    } else {
+                        items[i].getElementsByClassName('menu')[0].style.display = 'block';
+                    }
+                }
+                //第n天的按钮状态
+                if (i == days) {
+                    items[i].getElementsByClassName('killing')[0].style =
+                        'background-color :#69D1E9;'
+                    items[i].getElementsByClassName('killing')[0].getElementsByTagName('i')[0].style =
+                        'border-right:.1rem solid #69D1E9';
+                    items[i].getElementsByClassName('dead')[0].style =
+                        'background-color :#69D1E9';
+                    items[i].getElementsByClassName('dead')[0].getElementsByTagName('i')[0].style =
+                        'border-right:.1rem solid #69D1E9';
+                    items[i].getElementsByClassName('decument')[0].style =
+                        'background-color :#69D1E9';
+                    items[i].getElementsByClassName('decument')[0].getElementsByTagName('i')[0].style =
+                        'border-right:.1rem solid #69D1E9';
+                    items[i].getElementsByClassName('vote')[0].style =
+                        'background-color :#69D1E9';
+                    items[i].getElementsByClassName('vote')[0].getElementsByTagName('i')[0].style =
+                        'border-right:.1rem solid #69D1E9';
+                }
+                //四按钮点击事件
+                console.log(items[i])
+                items[i].getElementsByClassName('killing')[0].onclick = function () {
+                    console.log(fsm.can('killings'))
+                    console.log(fsm.state)
+                    if (fsm.can('killings')) {
+                        location = 'jstask2-3-2.html';
+                    }
+                    fsm.killings();
+                }
+
+                items[i].getElementsByClassName('dead')[0].onclick = function () {
+                    // console.log(0)
+                    if (fsm.can('deads')) {
+
+                        items[i].getElementsByClassName('dead')[0].style =
+                            'background-color :rgb(31, 186, 110)';
+                        items[i].getElementsByClassName('dead')[0].getElementsByTagName('i')[0].style =
+                            'border-right:.1rem solid rgb(31, 186, 110)';
+                        alert("亡灵发表遗言");
+                    }
+                    fsm.deads();
+                }
+
+                items[i].getElementsByClassName('decument')[0].onclick = function () {
+                    console.log(fsm.can('decuments'))
+                    if (fsm.can('decuments')) {
+                        items[i].getElementsByClassName('decument')[0].style =
+                            'background-color :rgb(31, 186, 110)';
+                        items[i].getElementsByClassName('decument')[0].getElementsByTagName('i')[0].style =
+                            'border-right:.1rem solid rgb(31, 186, 110)';
+                        alert("玩家依次发言");
+                    }
+                    fsm.decuments();
+
+                }
+
+                items[i].getElementsByClassName('vote')[0].onclick = function () {
+                    if (fsm.can('votes')) {
+                        location = 'jstask2-3-3.html';
+                    }
+                    fsm.votes();
+                }
+                //按钮状态设置
+                console.log(i)
+                switch (step) {
+                    case '1':
+                        if (i != days) {
+                            fsm.killings();
+                            fsm.deads();
+                            fsm.decuments();
+                            fsm.votes();
+                            items[i].getElementsByClassName('killing')[0].style =
+                                'background-color :rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('killing')[0].getElementsByTagName('i')[0].style =
+                                'border-right:.1rem solid rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('dead')[0].style =
+                                'background-color :rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('dead')[0].getElementsByTagName('i')[0].style =
+                                'border-right:.1rem solid rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('decument')[0].style =
+                                'background-color :rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('decument')[0].getElementsByTagName('i')[0].style =
+                                'border-right:.1rem solid rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('vote')[0].style =
+                                'background-color :rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('vote')[0].getElementsByTagName('i')[0].style =
+                                'border-right:.1rem solid rgb(31, 186, 110)';
+                        } else {
+                            fsm.killings();
+                            items[i].getElementsByClassName('killing')[0].style =
+                                'background-color :rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('killing')[0].getElementsByTagName('i')[0].style =
+                                'border-right:.1rem solid rgb(31, 186, 110)';
+                        }
+                        break;
+                    case '2':
+                        if (i != days) {
+                            fsm.killings();
+                            fsm.deads();
+                            fsm.decuments();
+                            fsm.votes();
+                            console.log(items);
+                            console.log(i);
+                            items[i].getElementsByClassName('killing')[0].style =
+                                'background-color :rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('killing')[0].getElementsByTagName('i')[0].style =
+                                'border-right:.1rem solid rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('dead')[0].style =
+                                'background-color :rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('dead')[0].getElementsByTagName('i')[0].style =
+                                'border-right:.1rem solid rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('decument')[0].style =
+                                'background-color :rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('decument')[0].getElementsByTagName('i')[0].style =
+                                'border-right:.1rem solid rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('vote')[0].style =
+                                'background-color :rgb(31, 186, 110)';
+                            items[i].getElementsByClassName('vote')[0].getElementsByTagName('i')[0].style =
+                                'border-right:.1rem solid rgb(31, 186, 110)';
+                            break;
+                        }
+                }
+
+            }
+        }
+
+
+        //创建执行顺序状态机
+        var fsm = new StateMachine({
+            //当前状态
+            init: "live",
+            //状态转换
+            transitions: [{
+                    name: "killings",
+                    from: "live",
+                    to: "one"
+                },
+                {
+                    name: "deads",
+                    from: "one",
+                    to: "two"
+                },
+                {
+                    name: "decuments",
+                    from: "two",
+                    to: "three"
+                },
+                {
+                    name: "votes",
+                    from: "three",
+                    to: "live"
+                }
+            ],
+            //构造状态机的方法
+            methods: {
+                /* 如果状态转换不能正常转换就会触发下面的错误处理机制 */
+                onInvalidTransition: function (transitions, from, to) {
+                    switch (from) {
+                        case "live":
+                            alert("请点击杀手杀人");
+                            break;
+                        case "one":
+                            alert("请点击亡灵发表遗言");
+                            break;
+                        case "two":
+                            alert("请点击玩家依次发言");
+                            break;
+                        case "three":
+                            alert("请点击请点击全民投票");
+                            break;
+                    }
+                }
+            }
+        });
+
+
+        //返回选人页面
+        function back() {
+            sessionStorage.clear();
+            location = "../jstask2-1/jstask2-1-2.html";
+        }
+
+        //返回主页面
+        function home() {
+            sessionStorage.clear();
+            location = "../jstask2-1/jstask2-1-1.html";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+body {
+    background-color: #F0F0F0;
+}
+
+main {
+    margin-top: .6rem;
+
+    .items {
+        width: 96%;
+        margin: 0 2%;
+
+        .days {
+            position: relative;
+            width: 100%;
+            @include text(center, .4rem);
+            border: .01rem solid #999999;
+            font-size: .17rem;
+            color: #69D1E9;
+            background-color: #FFFFFF;
+
+            .next {
+                position: absolute;
+                top: .13rem;
+                right: .2rem;
+                @include w-h(.1rem, .1rem);
+                border-left: .02rem solid #69D1E9;
+                border-bottom: .02rem solid #69D1E9;
+                transform: rotate(-45deg);
+            }
+        }
+
+        .menu {
+            position: relative;
+            margin-top: .1rem;
+            background-color: #FFFFFF;
+
+            .triangle {
+                position: absolute;
+                top: -.2rem;
+                left: 50%;
+                border: .1rem solid transparent;
+                border-bottom: .1rem solid #FFFFFF;
+            }
+
+            .sun {
+                position: absolute;
+                top: 0.75rem;
+                left: .4rem;
+                width: .32rem;
+                height: .32rem;
+                background-color: #FFFFFF;
+                z-index: 1;
+            }
+
+            .moon {
+                position: absolute;
+                top: .2rem;
+                left: .4rem;
+                width: .32rem;
+                height: .32rem;
+                padding-top: .05rem;
+                background-color: #FFFFFF;
+                z-index: 1;
+            }
+
+            .wrap {
+                padding: .2rem 0 .2rem .55rem;
+
+                .box {
+                    width: 80%;
+                    padding-left: .4rem;
+                    border-left: .01rem solid #C9C9C9;
+
+                    button {
+                        position: relative;
+                        @include w-h(70%, .4rem);
+                        margin-bottom: .1rem;
+                        font-size: .17rem;
+                        color: #FFFFFF;
+                        background-color: #69D1E9;
+
+                        i {
+                            position: absolute;
+                            margin-top: -.1rem;
+                            top: 60%;
+                            left: -.1rem;
+                            border-top: .05rem solid transparent;
+                            border-bottom: .05rem solid transparent;
+                            border-right: .1rem solid #69D1E9;
+                        }
+
+                        .vote {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    @include fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: .11rem .12rem;
+    background-color: rgba(41, 189, 224, .5);
+
+    button {
+        padding: 0;
+        width: 43vw;
+        height: .43rem;
+        font-size: .2rem;
+        color: #FFFFFF;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+
+    .again {
+        background-color: #F66F6F;
+    }
+
+    .upload {
+        background-color: #FBB435;
+    }
+}

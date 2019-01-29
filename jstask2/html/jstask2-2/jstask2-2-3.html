@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jstask2-2-3</title>
+    <link rel="stylesheet" type="text/css" href="../../scss/body/jstask2-2-3.css" />
+</head>
+
+<body onload="onload()">
+    <header>
+        <a onclick="back()" class="back"></a>
+        <h5>法官日记</h5>
+        <a class="home" onclick="home()">
+            <span></span>
+        </a>
+    </header>
+    <main>
+        <div class="container">
+            <div class="item" id="role-0">
+                <div class="name">水民</div>
+                <div class="figure">1号</div>
+                <!-- <img src="../../img/knife.png" class="death"> -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="boundary">
+            <button onclick="location='../jstask2-3/jstask2-3-1.html'" class="choice">开始游戏</button>
+        </div>
+    </footer>
+    <script>
+        //提取数据
+        var playerArray = JSON.parse(sessionStorage.getItem("player")); //提取牌组
+        console.log(playerArray)
+        var math = sessionStorage.getItem("numble");
+        console.log(math)
+        //设置数据
+        var chooseplayers = []; //建立杀手杀人数组
+        var choosingplayers;
+        sessionStorage.setItem("chosingplayers", JSON.stringify(chooseplayers));
+        var choseplayer=[];//建立投票死的玩家数组
+        var chosedplayers;
+        sessionStorage.setItem("chosedplayers", JSON.stringify(choseplayer));
+        var zeo=JSON.parse(sessionStorage.getItem("chosingplayers"));
+        console.log(zeo)
+        var day = 0;
+        var date;
+        sessionStorage.setItem('date', day)
+        var kil = 0;//被杀死的杀手数
+        var kils;
+        sessionStorage.setItem('kils',kil);
+        
+        //加载数据
+        function onload() {
+
+            var sourceNode = document.getElementById("role-0"); // 获得被克隆的节点对象 
+            console.log(sourceNode)
+            for (var i = 1; i < math; i++) {
+                var clonedNode = sourceNode.cloneNode(true); // 克隆节点 
+                clonedNode.setAttribute("id", "role-" + i); // 修改一下id 值，避免id 重复 
+                sourceNode.parentNode.appendChild(clonedNode); // 在父节点插入克隆的节点
+            }
+            for (var j = 0; j < math; j++) {
+                var x = document.getElementsByClassName("name")[j].innerHTML = playerArray[j];
+                console.log(x)
+                var y = document.getElementsByClassName("figure")[j].innerHTML = j + 1 + '号';
+                console.log(y)
+            }
+        }
+        //返回选人页面
+        function back() {
+            sessionStorage.clear();
+            location = "../jstask2-1/jstask2-1-2.html";
+        }
+        //返回主页面
+        function home() {
+            sessionStorage.clear();
+            location = "../jstask2-1/jstask2-1-1.html";
+        }
+    </script>
+</body>
+
+</html>

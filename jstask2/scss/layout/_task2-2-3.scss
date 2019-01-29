@@ -1,0 +1,74 @@
+main {
+    margin-top: .7rem;
+    margin-bottom: .9rem;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+
+        .item {
+            width: 20vw;
+            height: 20vw;
+            text-align: center;
+            margin: 0 5vw 10vw 5vw;
+            border: 1vw solid #FFFFFF;
+
+            .name { 
+                width: 100%;
+                font-size: 5vw;
+                line-height: 16vw;
+                background-color: #FBB435;
+            }
+
+            .figure {
+                width: 100%;
+                line-height: 4vw;
+                font-size: 4vw;
+                color: #FFFFFF;
+                background-color: #1A99B7;
+            }
+
+            .death {
+                display: none;
+                margin-top: 3vw;
+                padding: 0;
+                width: 7vw;
+            }
+
+            &:hover .death {
+                display: inline-block;
+            }
+
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    height: .9rem;
+    background-color: #69D1E9;
+
+    .boundary {
+        @include flex;
+        width: 90vw;
+        height: .9rem;
+        border-top: .01rem solid #FFFFFF;
+    }
+
+    .choice {
+        border: none;
+        width: 77vw;
+        height: .44rem;
+        font-size: .18rem;
+        color: #FFFFFF;
+        background-color: #FBB435;
+    }
+
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jstask2-1-2</title>
+    <link rel="stylesheet" type="text/css" href="../../scss/body/jstask2-1-2.css" />
+</head>
+
+<body>
+    <div class="all"> 
+        <header>
+            <a href="jstask2-1-1.html" class="back"></a>
+            <h5></h5>
+            <a href="jstask2-1-1.html" class="home" >
+                <span></span>
+            </a>
+        </header>
+
+        <main>
+            <p>玩家匹配</p>
+            <div class="players">
+                <div class="killers">
+                    <img src="../../img/killer.png">
+                    <p>杀手 <span id="killer">2</span> 人</p>
+                </div>
+                <div class="people">
+                    <img src="../../img/person.png">
+                    <p>平民 <span id="person">6</span> 人</p>
+                </div>
+            </div>
+            <div class="numble">
+                <p class="figure">请输入玩家人数为 <input oninput="feedback()" id="gamers" type="text" name="phonenumber" size="2"
+                        maxlength="2" value="8" oninput="value=value.replace(/[^\d]/g,'')" /> 人</p>
+                <span class="note">(玩家人数为4-18人之间)</span>
+            </div>
+            <button onclick="poker()" class="deal">给玩家发牌</button>
+        </main>
+        <script>
+            var all;//玩家人数
+            var numble;
+            var player;//存储玩家数组
+            var a;//杀手人数
+            var kill;//存储杀手人数
+            var b;//平民人数
+            var life;//存储平民人数
+
+            function feedback() {
+                var bad = document.getElementById('killer');
+                var good = document.getElementById('person');
+                var h = document.getElementById('gamers');
+                all = h.value;
+                
+                //判断杀手和平民人数
+                if (all >= 4 && all <= 18) {
+                    a = Math.floor(all / 3);
+                    // console.log(a)
+                    bad.innerHTML = a;
+                    b = all - a;
+                    // console.log(b)
+                    good.innerHTML = b;
+                } else {
+                    bad.innerHTML = "0";                
+                    good.innerHTML = "0";
+                }
+                console.log(all)
+            }
+
+            function poker() {
+                //默认值
+                if (all == undefined) {
+                    a = 2;
+                    b = 6;
+                    all = 8;
+                }
+                //弹出框提示
+                if (all < 4 || all > 18) {
+                window.alert("请输入人数4-18人之间");
+                }
+                
+                //建立卡牌
+                var killer = [];
+                var citizen = [];
+                for(var i=0;i<a;i++){
+                    killer[i]='杀手';
+                }
+                // console.log(killer)
+                for(var l=0;l<b;l++){
+                    citizen[l]='平民';
+                }
+                var c = killer.concat(citizen);
+                //洗牌
+                for (var i = c.length; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i));
+                    var temp = c[i - 1];
+                    c[i - 1] = c[j];
+                    c[j] = temp;
+                }
+                console.log(c)
+                console.log(all)
+                //保存数据
+                sessionStorage.setItem("numble",Number(all));
+                sessionStorage.setItem("kill",a);
+                sessionStorage.setItem("life",b);
+                sessionStorage.setItem("player",JSON.stringify(c));
+                location="../jstask2-2/jstask2-2-1.html";
+            }
+        </script>
+    </div>
+
+</body>
+ 
+</html>

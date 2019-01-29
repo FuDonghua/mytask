@@ -1,0 +1,36 @@
+/* 变量 */
+$font-size: .17rem;
+$eliminate: 0;
+$border: none;
+$color: #FFFFFF;
+$background-color: #69D1E9;
+
+@mixin flex($x:center, $y:center) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+@mixin w-h ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin position($p:relative, $l:0, $r:0) {
+    position: $p;
+    left: $l;
+    right: $r;
+}
+
+@mixin text($t:center, $h:0) {
+    text-align: $t;
+    line-height: $h;
+}
+
+@mixin fixed {
+    position: fixed;
+    left: $eliminate;
+    right: $eliminate;
+    background: $background-color;
+    z-index: 1;
+}

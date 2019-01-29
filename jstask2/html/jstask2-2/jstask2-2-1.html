@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jstask2-2-1</title>
+    <link rel="stylesheet" type="text/css" href= "../../scss/body/jstask2-2-1.css";/>
+</head>
+
+<body onload="onload()">
+    <header>
+        <a href='#' onClick='javascript :history.go(-1);' class="back"></a>
+        <h5>查看身份</h5>
+        <a class="home" onclick="home()" >
+            <span></span>
+        </a>
+    </header>
+    <main>
+        <div class="frame">
+            <div class="number"><span id="figure">1</span></div>
+            <img src="../../img/King.png" />
+        </div>
+        <button class="check" onclick="clickCounter()">查看<span id="look">1</span>号身份</button>
+    </main>
+    <script>
+        //提取数据
+
+        var numble = +sessionStorage.getItem("numble");
+        console.log(numble)
+        var copy; //保存点击次数
+        var out; //读取点击次数 
+        //保存点击次数
+        function clickCounter() {
+
+            if (sessionStorage.clickcount < numble) {
+                sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+            } else {
+                sessionStorage.clickcount = 1;
+            }
+            sessionStorage.setItem("copy", sessionStorage.clickcount );
+            console.log(sessionStorage.clickcount)
+            location = "jstask2-2-2.html";
+        }
+
+        //设置数据加载方式
+        function onload() {
+            out = +sessionStorage.getItem("copy");
+            console.log(out)
+            if (out >= 1) {
+                document.getElementById("figure").innerHTML = out+1;
+                document.getElementById("look").innerHTML = out+1;
+            }
+        }
+        
+        //返回主页面
+        function home(){
+            sessionStorage.clear();
+            location = "../jstask2-1/jstask2-1-1.html";
+        }
+    
+        
+    </script>
+</body>
+
+</html> 
