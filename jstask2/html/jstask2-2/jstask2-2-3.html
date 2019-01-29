@@ -37,22 +37,11 @@
         console.log(playerArray)
         var math = sessionStorage.getItem("numble");
         console.log(math)
-        //设置数据
-        var chooseplayers = []; //建立杀手杀人数组
-        var choosingplayers;
-        sessionStorage.setItem("chosingplayers", JSON.stringify(chooseplayers));
-        var choseplayer=[];//建立投票死的玩家数组
-        var chosedplayers;
-        sessionStorage.setItem("chosedplayers", JSON.stringify(choseplayer));
-        var zeo=JSON.parse(sessionStorage.getItem("chosingplayers"));
-        console.log(zeo)
-        var day = 0;
-        var date;
-        sessionStorage.setItem('date', day)
-        var kil = 0;//被杀死的杀手数
-        var kils;
-        sessionStorage.setItem('kils',kil);
-        
+        //获取节点
+        var choose = document.getElementsByClassName('item');
+        console.log(choose)
+        var go = document.getElementsByClassName('choice');
+        console.log(go)
         //加载数据
         function onload() {
 
@@ -68,6 +57,19 @@
                 console.log(x)
                 var y = document.getElementsByClassName("figure")[j].innerHTML = j + 1 + '号';
                 console.log(y)
+            }
+            //显示已死亡颜色不同
+            var chooseplayer = JSON.parse(sessionStorage.getItem("chosingplayers")); //提取杀手杀人数组
+            console.log(chooseplayer)
+            var choseplayer = JSON.parse(sessionStorage.getItem("chosedplayers")); //提取投票死的玩家数组
+            killed = chooseplayer.concat(choseplayer);
+            for (let k = 0; k < killed.length; k++) {
+                choose[killed[k]].getElementsByClassName('name')[0].style = 'background-color:#1A99B7';
+            }
+            var step = sessionStorage.getItem("steps");
+            console.log(step)
+            if (step != undefined) {
+                go[0].innerHTML = "继续游戏";
             }
         }
         //返回选人页面

@@ -18,7 +18,7 @@
 
     <main>
         <div class="trophy">
-            <div class="victory"><span id="victory">杀手</span>胜利</div>
+            <div class="victory"><span id="victory">游戏结束</span></div>
         </div>
         <div class="character">
             <p class="time">剩余玩家：<span id="all"></span></p>
@@ -56,10 +56,12 @@
         var sourceNode = document.getElementById("role-0"); // 获得被克隆的节点对象 
         //自运行事件
         window.onload = function () {
-            if (kilslife == 0) {
-                victory.innerHTML = '平民';
-            } else {
-                victory.innerHTML = '杀手';
+            if (kilslife == 0 || kilslife == lifslife) {
+                if (kilslife == 0) {
+                    victory.innerHTML = '平民胜利';
+                } else {
+                    victory.innerHTML = '杀手胜利';
+                }
             }
             all.innerHTML = kilslife + lifslife;
             killer.innerHTML = kilslife;
@@ -72,8 +74,8 @@
                 }
                 //显示天数
                 dayy[i].innerHTML = [i + 1];
-                killnight[i].innerHTML = chooseplayers[i] + '号被投死，真实身份为' + playerArray[chooseplayers[i]];
-                voteday[i].innerHTML = choseplayer[i] + '号被投死，真实身份为' + playerArray[choseplayer[i]];
+                killnight[i].innerHTML = chooseplayers[i] + 1 + '号被投死，真实身份为' + playerArray[chooseplayers[i]];
+                voteday[i].innerHTML = choseplayer[i] + 1 + '号被投死，真实身份为' + playerArray[choseplayer[i]];
             }
         }
         //返回主页面

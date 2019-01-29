@@ -45,7 +45,7 @@
         </div>
     </main>
     <footer>
-        <button onclick="home()" class="again">结束游戏</button>
+        <button onclick="location='../jstask2-3/jstask2-3-4.html'" class="again">结束游戏</button>
         <button onclick="location='../jstask2-2/jstask2-2-3.html'" class="upload">法官日志</button>
     </footer>
     <script src="../../js/state-machine.js"></script>
@@ -65,6 +65,10 @@
         console.log(items)
         var death = document.getElementsByClassName('cut');
         var votedeath = document.getElementsByClassName('push');
+        var store;
+        var storee;
+        var stores;
+        var storees;
         //自运行事件
         window.onload = function () {
 
@@ -139,47 +143,48 @@
                         'border-right:.1rem solid #69D1E9';
                 }
                 //四按钮点击事件
-                console.log(items[i])
-                items[i].getElementsByClassName('killing')[0].onclick = function () {
-                    console.log(fsm.can('killings'))
-                    console.log(fsm.state)
-                    if (fsm.can('killings')) {
-                        location = 'jstask2-3-2.html';
+                if (i == days) {
+                    items[i].getElementsByClassName('killing')[0].onclick = function () {
+                        console.log(fsm.can('killings'))
+                        console.log(fsm.state)
+                        if (fsm.can('killings')) {
+                            location = 'jstask2-3-2.html';
+                        }
+                        fsm.killings();
                     }
-                    fsm.killings();
-                }
 
-                items[i].getElementsByClassName('dead')[0].onclick = function () {
-                    // console.log(0)
-                    if (fsm.can('deads')) {
-
-                        items[i].getElementsByClassName('dead')[0].style =
-                            'background-color :rgb(31, 186, 110)';
-                        items[i].getElementsByClassName('dead')[0].getElementsByTagName('i')[0].style =
-                            'border-right:.1rem solid rgb(31, 186, 110)';
-                        alert("亡灵发表遗言");
+                    items[i].getElementsByClassName('dead')[0].onclick = function () {
+                        // console.log(0)
+                        if (fsm.can('deads')) {
+                            store = items[i].getElementsByClassName('dead')[0].style =
+                                'background-color :rgb(31, 186, 110)';
+                            storee = items[i].getElementsByClassName('dead')[0].getElementsByTagName('i')[0].style =
+                                'border-right:.1rem solid rgb(31, 186, 110)';
+                            alert("亡灵发表遗言");
+                        }
+                        fsm.deads();
                     }
-                    fsm.deads();
-                }
 
-                items[i].getElementsByClassName('decument')[0].onclick = function () {
-                    console.log(fsm.can('decuments'))
-                    if (fsm.can('decuments')) {
-                        items[i].getElementsByClassName('decument')[0].style =
-                            'background-color :rgb(31, 186, 110)';
-                        items[i].getElementsByClassName('decument')[0].getElementsByTagName('i')[0].style =
-                            'border-right:.1rem solid rgb(31, 186, 110)';
-                        alert("玩家依次发言");
+                    items[i].getElementsByClassName('decument')[0].onclick = function () {
+                        console.log(fsm.can('decuments'))
+                        if (fsm.can('decuments')) {
+                            stores = items[i].getElementsByClassName('decument')[0].style =
+                                'background-color :rgb(31, 186, 110)';
+                            storees = items[i].getElementsByClassName('decument')[0].getElementsByTagName('i')[
+                                    0].style =
+                                'border-right:.1rem solid rgb(31, 186, 110)';
+                            alert("玩家依次发言");
+                        }
+                        fsm.decuments();
+
                     }
-                    fsm.decuments();
 
-                }
-
-                items[i].getElementsByClassName('vote')[0].onclick = function () {
-                    if (fsm.can('votes')) {
-                        location = 'jstask2-3-3.html';
+                    items[i].getElementsByClassName('vote')[0].onclick = function () {
+                        if (fsm.can('votes')) {
+                            location = 'jstask2-3-3.html';
+                        }
+                        fsm.votes();
                     }
-                    fsm.votes();
                 }
                 //按钮状态设置
                 console.log(i)
@@ -241,7 +246,17 @@
                             break;
                         }
                 }
-
+                //事件委托
+                if (i != days) {
+                    var oUl = document.getElementsByClassName('box');
+                    oUl[i].onclick = function (ev) {
+                        var ev = ev || window.event;
+                        var target = ev.target || ev.srcElement;
+                        if (target.nodeName.toLowerCase() == 'button') {
+                            alert('请点击当天按钮');
+                        }
+                    }
+                }
             }
         }
 
