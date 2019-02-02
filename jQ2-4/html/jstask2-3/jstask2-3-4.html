@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jstask2-3-4</title>
+    <link rel="stylesheet" type="text/css" href="../../scss/body/jstask2-3-4.css" />
+</head>
+
+<body>
+    <header>
+        <div class="home"></div>
+        <div class="title">游戏结果</div>
+        <div class="explain"></div>
+    </header>
+
+    <main>
+        <div class="trophy">
+            <div class="victory"><span id="victory">游戏结束</span></div>
+        </div>
+        <div class="character">
+            <p class="time">剩余玩家：<span id="all"></span></p>
+            <p class="result">杀&#8195手<span id="killer"></span>人&#8195&#8195&#8195&#8195&#8195平&#8195民<span id="people"></span>人</p>
+        </div>
+        <div class="date">
+            <div class="number">第<span class="dayy">1</span>天</div>
+            <p class="night">晚上：<span class="killnight"></span></p>
+            <p class="day">白天：<span class="voteday"></span></p>
+        </div>
+    </main>
+
+    <footer>
+        <button onclick="home()" class="again">再来一局</button>
+        <button class="upload">上传并分享</button>
+    </footer>
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script>
+        //提取数据
+        var playerArray = JSON.parse(sessionStorage.getItem("player")); //提取牌组
+        console.log(playerArray)
+        var days = +sessionStorage.getItem('days');
+        console.log(days)
+        var kilslife = +sessionStorage.getItem('kilslife'); //提取杀手剩余人数
+        var lifslife = +sessionStorage.getItem('lifslife'); //提取平民剩余人数
+        var chooseplayers = JSON.parse(sessionStorage.getItem("chosingplayers")); //被杀手杀死的玩家数组
+        var choseplayer = JSON.parse(sessionStorage.getItem("chosedplayers")); //被投票死的玩家数组
+        //自运行事件
+        $(function () {
+            if (kilslife == 0 || kilslife == lifslife) {
+                if (kilslife == 0) {
+                    $('#victory').text('平民胜利');
+                } else {
+                    $('#victory').text('杀手胜利');
+                }
+            }
+            $('#all').text(kilslife + lifslife);
+            $('#killer').text(kilslife);
+            $('#people').text(lifslife);
+            for (let i = 0; i < days; i++) {
+                if (i > 0) {
+                    //克隆
+                    $(".date").eq(0).clone(true).appendTo("main");
+                }
+                //显示天数
+                $('.dayy').eq(i).text(i + 1);
+                if (chooseplayers[i] != undefined) {
+                    $('.killnight').eq(i).text(chooseplayers[i] + 1 + '号被杀死，真实身份为' + playerArray[chooseplayers[
+                        i]]);
+                } else {
+                    $('.killnight').eq(i).text('');
+                }
+                if (choseplayer[i] != undefined) {
+                    $('.voteday').eq(i).text(choseplayer[i] + 1 + '号被投死，真实身份为' + playerArray[choseplayer[i]]);
+                } else {
+                    $('.voteday').eq(i).text('');
+                }
+            }
+        })
+        //返回主页面
+        function home() {
+            sessionStorage.clear();
+            location = "../jstask2-1/jstask2-1-1.html";
+        }
+    </script>
+</body>
+
+</html>

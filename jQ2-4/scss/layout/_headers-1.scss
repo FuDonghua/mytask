@@ -1,0 +1,37 @@
+header {
+	@include  flex(space-between);
+	height: .44rem;
+	background-color: #69D1E9;
+ 
+	.back {
+		width: 0.15rem;
+		height: 0.15rem;
+		margin-left: .2rem;
+		border-top: .03rem solid #FFFFFF;
+		border-left: .03rem solid #FFFFFF;
+		transform: rotate(-45deg);
+	}
+
+	h5 {
+		font-size: .17rem;
+		color: #FFFFFF;
+		letter-spacing: .02rem;
+	}
+
+	.home {
+		position: relative;
+		margin-right: .2rem;
+		width: 0.03rem;
+		height: 0.3rem;
+		background: #FFFFFF;
+		transform: rotate(45deg);
+
+		span {
+			position: absolute;
+			width: 0.03rem;
+			height: 0.3rem;
+			background: #FFFFFF;
+			transform: rotate(-90deg);
+		}
+	}
+}

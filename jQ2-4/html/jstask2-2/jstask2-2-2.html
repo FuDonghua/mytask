@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jstask2-2-3</title>
+    <link rel="stylesheet" type="text/css" href="../../scss/body/jstask2-2-2.css" />
+</head>
+
+<body>
+    <header>
+        <a onclick="back()" class="back"></a>
+        <h5>法官日记</h5>
+        <a class="home" onclick="home()">
+            <span></span>
+        </a>
+    </header>
+    <main>
+        <div class="container">
+            <div class="item">
+                <div class="name">平民</div>
+                <div class="figure">1号</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="boundary">
+            <button onclick="location='../jstask2-3/jstask2-3-1.html'" class="choice">开始游戏</button>
+        </div>
+    </footer>
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script>
+        //提取数据
+        var playerArray = JSON.parse(sessionStorage.getItem("player")); //提取牌组
+        console.log(playerArray)
+        //加载数据
+        $(function() {
+            //克隆
+            for (let i = 0; i < playerArray.length - 1; i++) {
+                $(".item").eq(0).clone(true).appendTo(".container").eq(0);
+            }
+            //修改玩家名字
+            for (let i = 0; i < playerArray.length; i++) {
+                if (playerArray[i] == "杀手") {
+                    $(".name").eq(i).text("杀手");
+                }
+                $(".figure").eq(i).text(i + 1 + "号");
+            }
+
+            //显示已死亡颜色不同
+            var chooseplayer = JSON.parse(sessionStorage.getItem("chosingplayers")); //提取杀手杀人数组
+            console.log(chooseplayer)
+            var choseplayer = JSON.parse(sessionStorage.getItem("chosedplayers")); //提取投票死的玩家数组
+            var killed = chooseplayer.concat(choseplayer);
+            for (let k = 0; k < killed.length; k++) {
+                $('.name').eq(killed[k]).css('background-color','#1A99B7');
+            }
+            var step = sessionStorage.getItem("steps");
+            console.log(step)
+        })
+        //返回选人页面
+        function back() {
+            sessionStorage.clear();
+            location = "../jstask2-1/jstask2-1-2.html";
+        }
+        //返回主页面
+        function home() {
+            sessionStorage.clear();
+            location = "../jstask2-1/jstask2-1-1.html";
+        }
+    </script>
+</body>
+
+</html>

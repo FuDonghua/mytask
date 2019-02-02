@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jstask2-3</title>
+    <link rel="stylesheet" type="text/css" href="../../scss/body/jstask2-2-1.css" />
+</head>
+
+<body>
+    <header>
+        <a href='#' onClick='javascript :history.go(-1);' class="back"></a>
+        <h5>传递身份</h5>
+        <a class="home" onclick="home()">
+            <span></span>
+        </a>
+    </header>
+    <main>
+        <div class="frame">
+            <div class="number"><span id="figure">1</span></div>
+            <img id="first" src="../../img/King.png" style="display:block;" />
+            <div class="box" style="display:none;">
+                <img src="../../img/role.png" />
+                <span class="idcard">平民</span>
+            </div>
+        </div>
+        <button class="check">隐藏并传递<span id="look">1</span>号身份</button>
+    </main>
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script>
+        //提取数据
+        var playerArray = JSON.parse(sessionStorage.getItem("player")); //提取牌组
+        console.log(playerArray)
+        var numble = +sessionStorage.getItem("numble");
+        console.log(numble)
+        var follow = 0; //提取下标
+        var front; //正面
+        var other; //底面
+        //跳转
+        $('.check').eq(0).click(function () {
+            if (follow < numble - .5) {
+                follow += .5
+                console.log(follow)
+                if (follow % 1 != 0) {
+                    other = follow + .5;
+                    $("#figure").text(other);
+                    $("#look").text(other);
+                    $('#first').css("display", "none");
+                    $('.box').eq(0).css("display", "block");
+                    $(".idcard").eq(0).text(playerArray[other-1]);
+                } else {
+                    $("#figure").text(follow + 1);
+                    $("#look").text(follow + 1);
+                    $('#first').css("display", "block");
+                    $('.box').eq(0).css("display", "none");
+                }
+            } else {
+                location = "jstask2-2-2.html";
+            }
+        })
+
+        //返回主页面
+        function home() {
+            sessionStorage.clear();
+            location = "../jstask2-1/jstask2-1-1.html";
+        }
+    </script>
+</body>
+
+</html>

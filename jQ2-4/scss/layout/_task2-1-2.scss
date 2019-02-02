@@ -1,0 +1,71 @@
+body{
+    background-color: #F0F0F0;
+}
+
+main {
+    margin: .15rem .15rem 0 .15rem;
+
+    p {
+        @include text(center, .6rem);
+        font-size: 0.2rem;
+        background-color: #FFFFFFFF;
+    }
+
+    .players {
+        @include flex;
+        margin-top: .15rem;
+        background-color: #FFFFFFFF;
+
+        .killers {
+            @include flex;
+            flex-direction: column;
+            @include w-h(50%, 2rem);
+
+            img {
+                width: 1rem;
+            }
+        }
+
+        .people {
+            @include flex;
+            flex-direction: column;
+            @include w-h(50%, 2rem);
+
+            img {
+                width: 1rem;
+            }
+        }
+    }
+
+    .numble {
+        height: .8rem;
+        margin-top: .15rem;
+        text-align: center;
+        background-color: #FFFFFFFF;
+
+        .figure {
+            font-size: .17rem;
+            height: .4rem;
+
+            input {
+                width: .2rem;
+                outline: none;
+            }
+        }
+
+        .note {
+            font-size: .17rem;
+            color: orange;
+        }
+    }
+
+    .deal {
+        @include w-h(70%, .8rem);
+        margin: .2rem 15%;
+        font-size: .2rem;
+        letter-spacing: .05rem;
+        border-radius: .05rem;
+        color: #FFFFFFFF;
+        background-color: orange;
+    }
+}

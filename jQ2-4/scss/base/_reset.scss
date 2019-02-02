@@ -1,0 +1,28 @@
+/*去除默认属性*/
+html { 
+    font-size: 625%;
+}
+
+body {
+    margin: $eliminate;
+    font-size: initial;
+    background-color: $background-color;
+}
+
+ul,
+li,
+button,
+p ,
+a{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+.all {
+    background-color: #F0F0F0;
+    overflow: hidden;
+}   

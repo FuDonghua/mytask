@@ -1,0 +1,227 @@
+@charset "UTF-8";
+/* 变量 */
+/*去除默认属性*/
+html {
+  font-size: 625%;
+}
+
+body {
+  margin: 0;
+  font-size: initial;
+  background-color: #69D1E9;
+}
+
+ul,
+li,
+button,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.all {
+  background-color: #F0F0F0;
+  overflow: hidden;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: .44rem;
+  border-bottom: .01rem solid #FFFFFF;
+  background-color: #69D1E9;
+  z-index: 2;
+}
+
+header .back {
+  width: 0.15rem;
+  height: 0.15rem;
+  margin-left: .2rem;
+  border-top: .03rem solid #FFFFFF;
+  border-left: .03rem solid #FFFFFF;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+header h5 {
+  font-size: .17rem;
+  color: #FFFFFF;
+  letter-spacing: .02rem;
+}
+
+header .home {
+  position: relative;
+  margin-right: .2rem;
+  width: 0.03rem;
+  height: 0.3rem;
+  background: #FFFFFF;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header .home span {
+  position: absolute;
+  width: 0.03rem;
+  height: 0.3rem;
+  background: #FFFFFF;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+body {
+  background-color: #F0F0F0;
+}
+
+main {
+  margin-top: .6rem;
+}
+
+main .items {
+  width: 96%;
+  margin: 0 2%;
+}
+
+main .items .days {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  line-height: 0.4rem;
+  border: .01rem solid #999999;
+  font-size: .17rem;
+  color: #69D1E9;
+  background-color: #FFFFFF;
+}
+
+main .items .days .next {
+  position: absolute;
+  top: .13rem;
+  right: .2rem;
+  width: 0.1rem;
+  height: 0.1rem;
+  border-left: .02rem solid #69D1E9;
+  border-bottom: .02rem solid #69D1E9;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+main .items .menu {
+  position: relative;
+  margin-top: .1rem;
+  background-color: #FFFFFF;
+}
+
+main .items .menu .triangle {
+  position: absolute;
+  top: -.2rem;
+  left: 50%;
+  border: .1rem solid transparent;
+  border-bottom: .1rem solid #FFFFFF;
+}
+
+main .items .menu .sun {
+  position: absolute;
+  top: 0.75rem;
+  left: .4rem;
+  width: .32rem;
+  height: .32rem;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+
+main .items .menu .moon {
+  position: absolute;
+  top: .2rem;
+  left: .4rem;
+  width: .32rem;
+  height: .32rem;
+  padding-top: .05rem;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+
+main .items .menu .wrap {
+  padding: .2rem 0 .2rem .55rem;
+}
+
+main .items .menu .wrap .box {
+  width: 80%;
+  padding-left: .4rem;
+  border-left: .01rem solid #C9C9C9;
+}
+
+main .items .menu .wrap .box button {
+  position: relative;
+  width: 70%;
+  height: 0.4rem;
+  margin-bottom: .1rem;
+  font-size: .17rem;
+  color: #FFFFFF;
+  background-color: #69D1E9;
+}
+
+main .items .menu .wrap .box button i {
+  position: absolute;
+  margin-top: -.1rem;
+  top: 60%;
+  left: -.1rem;
+  border-top: .05rem solid transparent;
+  border-bottom: .05rem solid transparent;
+  border-right: .1rem solid #69D1E9;
+}
+
+main .items .menu .wrap .box button .vote {
+  margin-bottom: 0;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #69D1E9;
+  z-index: 1;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .11rem .12rem;
+  background-color: rgba(41, 189, 224, 0.5);
+}
+
+footer button {
+  padding: 0;
+  width: 43vw;
+  height: .43rem;
+  font-size: .2rem;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+footer .again {
+  background-color: #F66F6F;
+}
+
+footer .upload {
+  background-color: #FBB435;
+}
+/*# sourceMappingURL=jstask2-3-1.css.map */
