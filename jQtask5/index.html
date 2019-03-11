@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQtask5</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <form id="login">后台登录
+        <input placeholder="用户名" name="name" type="text">
+        <input placeholder="密码" name="pwd" type="password">
+        <p id="msg"></p>
+        <button id="btn" type="submit">登录</button>
+    </form>
+
+    <script>
+        $('form').on('submit', function () {
+            //用表单作为对象提取页面表单数据,并返回DOM对象
+            var formdata = new FormData($('#login')[0]);
+            $.ajax({
+                type: 'POST',
+                url: '/carrots-admin-ajax/a/login',
+                data: formdata,
+                processData: false,
+                contentType: false,
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data)
+                    if (data.code === 0) {
+                        window.location.href = "http://dev.admin.carrots.ptteng.com/";
+                    } else {
+                        $('#msg').text(data.message);
+                    }
+                }
+            })
+            return false; //阻止表单默认提交行为
+        })
+    </script>
+</body>
+
+</html>

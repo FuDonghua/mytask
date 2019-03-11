@@ -1,0 +1,31 @@
+html {
+    font-size: 625%;
+}
+
+body {
+    margin: 0;
+    font-size: initial;
+    text-align: center;
+    background-color: #69D1E9;
+}
+form{
+    width: 2rem;
+    margin: 2rem auto;
+    color: white;
+    background-color: orange;
+}
+input{
+    display: block;
+    margin: .1rem auto;
+}
+p{
+    margin: 0 auto .1rem;
+    height: .17rem;
+    color: red;
+}
+button{
+    width: 1.7rem;
+    border: none;
+    margin-bottom: .1rem;
+    background-color: yellow;
+}
